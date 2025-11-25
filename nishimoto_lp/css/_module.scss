@@ -1,0 +1,285 @@
+/*改善点
+
+・768pxまではPC（タブレットも含む）
+・767pxからSP
+
+
+追加ルール
+/*==================
+ ▼ブレイクポイントのルール▼
+ -スマホを基本設計にする-
+ *〜479px：SP縦
+ *480px〜：SP横
+ *600px〜タブレット
+ *960px〜小型PC
+ *1280px〜大型PC
+==================
+
+*/
+
+//カラー
+
+$mainColor: #003277;
+.mainColor {
+    color: $mainColor;
+}
+$mainColorSub: #26a3ff;
+.mainColorSub {
+    color: $mainColorSub;
+}
+
+$bgmainColor: #f1f3f3;
+.bgmainColor {
+    color: $bgmainColor;
+}
+
+$mainColorDeep: #596166;
+.mainColorDeep {
+    color: $mainColorDeep;
+}
+.bgMainColorDeep {
+    background-color: $mainColorDeep;
+}
+
+$mainColorExDeep: #f3efef;
+.mainColorExDeep {
+    color: $mainColorExDeep;
+}
+$mainColorLight: #aad1c1;
+.mainColorLight {
+    color: $mainColorLight;
+}
+.bgMainColorLight {
+    background-color: $mainColorLight;
+}
+$mainColorExLight: #ededed;
+.mainColorExLight {
+    color: $mainColorExLight;
+}
+.bgMainColorExLight {
+    background-color: $mainColorExLight;
+}
+
+$mainColorUlLight: #f6f7f9;
+.mainColorUlLight {
+    color: $mainColorUlLight;
+}
+$cautionColor: #e60110;
+.cautionColor {
+    color: $cautionColor;
+}
+
+.bgMainColorUlLight {
+    background-color: $mainColorUlLight;
+}
+
+$subColor: #443b24;
+.subColor {
+    color: $subColor;
+}
+.bgSubColor {
+    background-color: #004996;
+}
+
+$subColorDeep: #e3e3fb;
+.subColorDeep {
+    color: $subColorDeep;
+}
+.bgSubColorDeep {
+    background-color: $subColorDeep;
+}
+
+$subColorLight: #e3e2e2;
+.bgSubColorLight {
+    background-color: $subColorLight;
+}
+
+$compColor: #a9a8a9;
+.compColor {
+    color: $compColor;
+}
+
+.bgCompColor {
+    background-color: $compColor;
+}
+$grayColor: #cccdcd;
+.grayColor {
+    color: $grayColor;
+}
+.bgGrayColor {
+    background-color: $grayColor;
+}
+$grayColorLight: #dcdcdc;
+.grayColorLight {
+    color: $grayColorLight;
+}
+.bgGrayColorLight {
+    background-color: $grayColorLight;
+}
+$grayColorExLight: #ececec;
+.bgGrayColorExLight {
+    background-color: $grayColorExLight;
+}
+
+$bdColor: #f2f2f4;
+
+.bgWhiteTrans {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.bgBlackTrans {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bgBlack {
+    background: #000;
+}
+.bgWhite {
+    background: #fff;
+}
+
+.bgGrad {
+    background: rgb(255, 174, 86);
+    background: linear-gradient(to right, #efe590 0%, #ffae56 100%);
+}
+.bgGradafter {
+    background: rgb(239, 229, 144);
+    background: linear-gradient(to left, #efe590 0%, #ffae56 100%);
+}
+
+.bgTexture {
+    background-image: url(../img/bg_texture_light.gif);
+}
+.grayLight {
+    color: #9a9a9a;
+}
+.white {
+    color: #fff;
+}
+
+/*フォント系*/
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+$fontEn: "Jost", sans-serif;
+.fontEn {
+    font-family: $fontEn;
+}
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+$fontEnSub: "Cormorant Garamond", serif;
+.fontEnSub {
+    font-family: $fontEnSub;
+}
+
+// @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600&family=Oxygen:wght@300;400;700&display=swap");
+// $fontNumSub: "Oxygen", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
+$fontNumSub: "Barlow Condensed", sans-serif;
+
+.fontNumSub {
+    font-family: $fontNumSub;
+}
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+$fontNumSubA: "Didact Gothic", sans-serif;
+.fontNumSubA {
+    font-family: $fontNumSubA;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap");
+$fontNum: "Inter", sans-serif;
+.fontNum {
+    font-family: $fontNum;
+}
+
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;600;700;900&display=swap");
+// $fontJp:
+//     "Noto Serif JP", "Yu Mincho", "游明朝体", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho",
+//     sans-serif;
+// .fontJP {
+//     font-family: $fontJp;
+// }
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap");
+$serif: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+.serif {
+    font-family: $serif;
+}
+// $sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+// .sans {
+//     font-family: $sans;
+// }
+
+body {
+    font-family: $serif;
+    color: #232323;
+}
+//ブレイクポイント
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@mixin sp {
+    @media only screen and (max-width: (767px)) {
+        @content;
+    }
+}
+@mixin tab {
+    @media only screen and (min-width: 767px) and (max-width: 959px) {
+        @content;
+    }
+}
+@mixin spTab {
+    @media only screen and (max-width: 959px) {
+        @content;
+    }
+}
+@mixin notSpTab {
+    @media only screen and (min-width: 959px) {
+        @content;
+    }
+}
+@mixin maxSpTab {
+    @media only screen and (max-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media print, screen and (min-width: (768px)) {
+        @content;
+    }
+}
+@mixin note {
+    @media only screen and (min-width: 960px) and (max-width: 1279px) {
+        @content;
+    }
+}
+@mixin tabNote {
+    @media only screen and (min-width: 767px) and (max-width: 1279px) {
+        @content;
+    }
+}
+
+@mixin desk {
+    @media only screen and (min-width: (1281px)) {
+        @content;
+    }
+}
+
+@include sp {
+}
+@include tab {
+}
+@include spTab {
+}
+@include maxSpTab {
+}
+@include pc {
+}
+@include note {
+}
+@include desk {
+}

@@ -1,0 +1,1196 @@
+/*======================================
+            共通化
+=======================================*/
+.top-service-cards {
+  margin-top: 120px;
+  @include sp {
+    margin-top: 90px;
+  }
+}
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include sp {
+    display: block;
+  }
+}
+
+.service-card {
+  background-color: #fef3ef;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  @include sp {
+    margin-top: 20px;
+  }
+}
+
+.service-card__wrapper {
+  display: flex;
+  gap: 7%;
+
+  @include sp {
+    flex-direction: column;
+  }
+}
+
+.service-card__img {
+  width: 40%;
+
+  @include sp {
+    width: auto;
+  }
+}
+.service-card__img img {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.service-card__text {
+  width: 48%;
+
+  @include sp {
+    width: auto;
+    margin-top: 15px;
+  }
+}
+
+.service-card__icon {
+  margin-right: 15px;
+}
+
+.service-card__icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.service-card__content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.service-card__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.service-card__footer {
+  margin-top: 20px;
+}
+
+.service-card__link {
+  font-size: 14px;
+  color: #a8756f;
+  text-decoration: none;
+}
+.service-card__footer.text-center .commonBtn {
+  padding: 0.1em 3em;
+  font-size: 16px;
+}
+.service-card__footer.text-center .commonBtn span {
+  font-size: 16px;
+}
+.service-card__footer.text-center .commonBtn span::after {
+  font-size: 16px;
+}
+
+.arrow-icon {
+  transition: all 0.3s ease;
+}
+.arrow-icon__fill {
+  transition: transform 0.3s ease;
+}
+.arrow-icon:hover .arrow-icon__fill {
+  transform: translateX(10px);
+}
+.arrow-icon__path {
+}
+
+// 画像とテキストの横並び
+.media {
+  display: flex;
+  gap: 4%;
+
+  @include sp {
+    flex-direction: column;
+  }
+}
+
+.media__text {
+  width: 48%;
+
+  @include sp {
+    width: 100%;
+  }
+}
+
+.media__img {
+  width: 48%;
+
+  @include sp {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.media__img img {
+  aspect-ratio: 800/558;
+  object-fit: cover;
+}
+
+// 料金表
+.price-list {
+  width: 660px;
+  line-height: 1;
+  text-align: center;
+  border-collapse: collapse;
+
+  @include sp {
+    width: 100%;
+  }
+}
+
+.price-list tr:nth-of-type(2n + 3) {
+  background-color: #f7f7f7;
+}
+
+.price-list__head {
+  padding: 15px 0 15px 15px;
+  width: 33.333%;
+  font-size: 16px;
+  color: #fff;
+  background-color: #73b2c8;
+  border: 1px solid #ccc;
+  border-right: none;
+  position: relative;
+  text-align: left;
+
+  @include pc {
+    padding: 20px 0 20px 20px;
+    font-size: 24px;
+  }
+}
+
+.monthly {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+
+  @include sp {
+    font-size: 14px;
+  }
+}
+
+.price-list__month {
+  color: #fff;
+  background-color: #73b2c8;
+}
+
+.price-list__data {
+  padding: 10px 20px;
+  font-size: 12px;
+  width: 33.333%;
+  border: 1px solid #ccc;
+
+  @include pc {
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+}
+
+.price-list__data span {
+  margin-bottom: prem(5);
+  position: relative;
+  display: block;
+  text-decoration-line: line-through;
+}
+
+.price-list__data.amount {
+  text-align: right;
+
+  @include pc {
+    text-align: right;
+  }
+}
+// faciltyMenueの上部の余白
+.top-faciltyMenueList {
+  margin-top: 40px;
+  border: 3px solid #fff6eb;
+  padding: 20px;
+}
+.top-faciltyMenueList a {
+  border: none;
+}
+
+// mv下のメニュー
+.faciltyMenueList.kasou {
+  margin-top: 40px;
+  display: flex;
+  gap: 2%;
+  border-bottom: none;
+
+  @include spTab {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+}
+
+.faciltyMenueList.kasou {
+  padding-left: 20px;
+}
+.faciltyMenueList.kasou a span {
+  text-decoration: underline;
+  color: #0000ee9c;
+}
+.faciltyMenueList.kasou > li > a span:after {
+  left: -20px;
+  content: "▶︎";
+  text-decoration: none;
+}
+.faciltyMenueList.kasou > li > a:hover span:after {
+  left: -17px;
+  top: 4px;
+}
+
+.kasou.flex {
+  gap: 7%;
+}
+.top-faciltyMenueList p {
+  font-size: 20px;
+  color: #0000ee;
+  opacity: 0.7;
+  text-decoration: underline;
+  // width: max-content;
+  position: relative;
+}
+.top-faciltyMenueList p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  background-color: #adadad;
+  height: 2px;
+  width: 100%;
+}
+
+// 大きな見出し
+.heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.heading__en-small {
+  font-size: 20px;
+  color: #ef9e9f;
+}
+
+.heading__en-big {
+  font-size: 14vw;
+  position: relative;
+  line-height: 1;
+  color: #fdf3e8;
+}
+
+.heading__ja {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2rem, 0.9684rem + 4.4013vw, 6.25rem);
+  color: black;
+  display: block;
+  width: 100%;
+}
+
+/*======================================
+            会社概要
+=======================================*/
+
+.company-message {
+}
+
+.company-message__title {
+}
+
+.company-message__content {
+  display: flex;
+  gap: 40px;
+
+  @include sp {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.company-message__paragraph {
+  width: 56%;
+
+  @include sp {
+    width: auto;
+  }
+}
+
+.company-message__paragraph span {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.company-message__image {
+  width: 37%;
+
+  @include sp {
+    width: auto;
+  }
+}
+.company-message__image img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.company-message__signature {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+
+  @include sp {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+.company-profile {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.company-profile__list {
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  font-size: 13px;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid #adadad;
+
+  @include pc {
+    padding-bottom: 25px;
+    font-size: 16px;
+  }
+}
+.company-profile__list:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.company-profile__list + .company-profile__list {
+  margin-top: 15px;
+
+  @include pc {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+}
+
+.company-profile__list.add {
+  margin-top: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #adadad;
+
+  @include pc {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+}
+
+.company-profile__term {
+  max-width: 120px;
+  width: 100%;
+  flex-shrink: 0;
+
+  @include pc {
+    font-size: 18px;
+    max-width: 140px;
+  }
+}
+
+.company-profile__description li {
+  @include sp {
+    text-indent: -1rem;
+    padding-left: 1rem;
+  }
+}
+.company-profile__description li:not(:first-child) {
+  @include sp {
+    margin-top: 8px;
+  }
+}
+
+/*======================================
+            提供可能なケア
+=======================================*/
+.service {
+}
+
+.service__list {
+  @include sp {
+    max-width: 600px;
+    margin: auto;
+  }
+}
+.service__item {
+  display: flex;
+  gap: 4%;
+
+  @include sp {
+    flex-direction: column;
+  }
+}
+.service__item:not(:first-child) {
+  margin-top: 46px;
+}
+
+.service__image {
+  width: 31.7%;
+
+  @include sp {
+    width: auto;
+  }
+}
+.service__image img {
+  aspect-ratio: 520/390;
+  object-fit: cover;
+}
+
+.service__content {
+  width: 65.85%;
+
+  @include sp {
+    width: auto;
+  }
+}
+
+.service__text-title {
+}
+
+.service__description {
+  @include sp {
+    margin-top: 20px;
+  }
+}
+
+/*======================================
+        ご検討中の方へ
+=======================================*/
+.hospis-about {
+}
+
+.hospis-about__inner {
+}
+
+.hospis-about__title {
+}
+.hospis-about__img img {
+  aspect-ratio: 800/558;
+  object-fit: cover;
+}
+.commonMidashiJp {
+}
+
+.atenity-feature {
+  margin-top: 60px;
+}
+
+.atenity-feature__inner {
+}
+
+.atenity-feature__title {
+}
+
+.commonMidashiJp {
+}
+
+.mbS {
+}
+
+.mbSpM2 {
+}
+
+.atenity-feature__content {
+  display: flex;
+  gap: 4%;
+
+  @include tab {
+  }
+  @include sp {
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+.atenity-feature__item {
+  display: flex;
+  flex-direction: column;
+
+  @include tab {
+  }
+}
+.atenity-feature__item:not(:first-child) {
+  @include sp {
+    margin-top: 60px;
+  }
+}
+
+.atenity-feature__itemTitle {
+  // display: inline !important;
+  // box-decoration-break: clone;
+  // -webkit-box-decoration-break: clone;
+
+  // /* 以降の設定はデザインに合わせて調整 */
+  // font-size: 24px;
+  // font-weight: 700;
+  // padding: .4em 1em;
+  // line-height: 2.8;
+  // background: rgba(131, 71, 71, 0.8);
+
+  font-weight: 600;
+  font-size: 20px;
+  @include sp {
+    font-size: 18px;
+  }
+}
+.atenity-feature__itemTitle span {
+  @include sp {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    border-bottom: 2px solid #ef9e9f;
+  }
+}
+
+.atenity-feature__itemImg {
+  width: 25%;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.atenity-feature__itemText {
+}
+
+/*======================================
+            提供可能なケア
+=======================================*/
+.services-list {
+}
+
+.services-list__inner {
+}
+
+.cnt {
+}
+
+.cntS {
+}
+
+.care-section {
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 21%,
+    #fdf3e8 35%,
+    #fdf3e8 75%,
+    transparent 93%,
+    transparent 100%
+  );
+}
+.care-section__title {
+  margin-top: 60px;
+}
+
+.services-list__description {
+}
+
+.services-list__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 7列を均等に配置 */
+  grid-gap: 10px; /* グリッド間の隙間を設定 */
+  padding: 20px;
+  padding-top: 0;
+  margin-top: 30px;
+  max-width: 1371px;
+  background-color: #f8f8f8;
+
+  @include sp {
+    display: block;
+    padding-top: 20px;
+  }
+}
+
+.services-list__item {
+  margin-top: 30px;
+
+  @include sp {
+    // width: 70%;
+    margin: auto;
+    font-size: 14px;
+  }
+}
+.services-list__item.indent {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+.services-list__note {
+  margin-top: 16px;
+
+  @include sp {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+}
+
+/*======================================
+            ご入居までの流れ
+=======================================*/
+.flow {
+  position: relative;
+}
+.flow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  // transform: translateXY(-50%,-50%);
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 21%,
+    #fdf3e8 35%,
+    #fdf3e8 75%,
+    transparent 93%,
+    transparent 100%
+  );
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.flow__inner {
+}
+
+.cnt {
+}
+
+.cntS {
+}
+
+.flow__title {
+}
+
+.flow__content {
+}
+
+.flow__text {
+}
+
+.commonText {
+}
+
+.media__text {
+}
+
+.flow__img {
+}
+
+.media__img {
+}
+
+.flow-chart {
+  background-color: #fff6eb;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 60px;
+}
+
+.flow-chart .footerBtnList {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.flow-chart__footer {
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+
+  @include sp {
+    width: 80%;
+  }
+}
+.flow-chart__footer a {
+  text-align: center;
+}
+
+.flow-chart__title.commonMidashiJp {
+  background-color: #fefdfb;
+}
+
+.flow-chart__text {
+}
+
+.admission-documents {
+  margin-top: 60px;
+}
+
+.admission-documents__inner {
+}
+
+.admission-documents__content {
+  padding: 20px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.admission-documents__title {
+  font-size: clamp(2rem, 1.8058252427rem + 0.5177993528vw, 2.8rem);
+  text-align: center;
+  position: relative;
+}
+.admission-documents__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.5em;
+  transform: translateX(-50%);
+  background: #ef9e9f;
+  height: 2px;
+  width: 30%;
+
+  @include sp {
+    width: 68%;
+  }
+}
+
+.admission-documents__list {
+  width: 50%;
+  margin: auto;
+  margin-top: 40px;
+
+  @include sp {
+    width: 90%;
+  }
+}
+
+.admission-documents__list-item {
+  text-indent: -1rem;
+  padding-left: 1rem;
+}
+.admission-documents__list-item:not(:first-child) {
+  margin-top: 10px;
+}
+
+.admission-documents__list-attention {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+
+  @include sp {
+    width: 90%;
+  }
+}
+
+.admission-documents__list-attention-item {
+  text-indent: -1.5rem;
+  padding-left: 1.5rem;
+}
+
+/*======================================
+            費用詳細
+=======================================*/
+.service-fee__summary {
+  display: flex;
+  gap: 80px;
+  margin-top: 60px;
+
+  @include sp {
+    margin-top: 40px;
+  }
+  @include spTab {
+    flex-direction: column;
+  }
+}
+
+.test-con {
+  background-color: #f4f4f4;
+  width: 23.34%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 196px 0;
+  font-size: 28px;
+
+  @include spTab {
+    width: auto;
+    padding: 20px 0;
+  }
+}
+
+.testa {
+  @include spTab {
+    font-size: 20px;
+  }
+}
+.testa span {
+  font-size: 30px;
+  display: block;
+  line-height: 1.5;
+
+  @include spTab {
+    font-size: 24px;
+  }
+}
+.zero {
+  font-size: 100px;
+
+  @include spTab {
+    font-size: 70px;
+  }
+}
+
+.priceBlock.fees {
+  @include spTab {
+    text-align: center;
+  }
+}
+
+.service-fee__monthly {
+  width: calc(100% - 23.34%);
+
+  @include spTab {
+    width: auto;
+  }
+}
+.service-fee__monthly .plus {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+}
+
+.testb {
+  background-color: #f4f4f4;
+  display: flex;
+  border-radius: 20px;
+  padding: 46px 20px;
+  font-size: 24px;
+  align-items: center;
+
+  @include sp {
+    padding: 23px 20px;
+  }
+
+  @include spTab {
+    font-size: 18px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.testb.color1 {
+  background-color: #f7d1a5;
+}
+.testb.color2 {
+  background-color: #ef9e9f;
+}
+.testb.color3 {
+  background-color: #fdf3e8;
+}
+
+.testb span {
+  font-size: 28px;
+  width: 380px;
+  flex-shrink: 0;
+
+  @include spTab {
+    font-size: 22px;
+    width: 210px;
+  }
+}
+
+.spTab {
+  display: block;
+
+  @include spTab {
+    display: none;
+  }
+  @include note {
+    display: block !important;
+  }
+}
+
+.fees {
+  position: relative;
+}
+.fees::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 21%,
+    #fdf3e8 35%,
+    #fdf3e8 75%,
+    transparent 93%,
+    transparent 100%
+  );
+  z-index: -1;
+}
+
+.fees-detail__inner {
+}
+
+.cnt {
+}
+
+.cntS {
+}
+
+.fees-detail__title {
+}
+
+.fees-detail__content {
+}
+
+.fees-detail-list {
+  font-size: 24px;
+
+  @include sp {
+    font-size: 20px;
+    text-indent: -2rem;
+    padding-left: 2rem;
+  }
+}
+.fees-detail-list p {
+  // padding-left: 1em;
+  font-size: 18px;
+  text-indent: 0;
+
+  @include sp {
+    font-size: 16px;
+  }
+}
+.fees-detail-list:not(:first-child) {
+  margin-top: 20px;
+}
+.fees-detail-list span {
+  display: block;
+  font-size: 16px;
+  @include sp {
+    text-indent: -2rem;
+    padding-left: 2rem;
+  }
+}
+
+.fees-welfare {
+}
+.fees-service__content .annotation {
+  text-indent: -2rem;
+  padding-left: 2rem;
+}
+
+/*======================================
+            よくある質問
+=======================================*/
+
+.faq-buttonWrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4%;
+
+  @include spTab {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 14px;
+  }
+}
+
+.faq-button {
+  border-radius: 30px;
+  color: white;
+  background: #ef9e9f;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 0;
+  border: 1px solid;
+  flex-grow: 1;
+}
+.faq-button:hover {
+  color: white;
+}
+
+/*======================================
+            ホームでの暮らし
+=======================================*/
+.home-environment {
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 21%,
+    #fdf3e8 35%,
+    #fdf3e8 75%,
+    transparent 93%,
+    transparent 100%
+  );
+}
+.home-meal {
+}
+
+.home-meal__inner {
+}
+
+.equipment-text {
+  margin-bottom: 60px;
+}
+
+.home-meal__title {
+}
+
+.commonMidashiJp {
+}
+
+.mbS {
+}
+
+.mbSpM2 {
+}
+
+.mt60 {
+}
+
+.priceBlock {
+}
+
+.mbS2 {
+}
+
+.home-meal__text {
+}
+
+.home-meal__images-content {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+
+  @include sp {
+    flex-direction: column;
+  }
+}
+
+.home-meal__image-wrapper p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.home-meal__image img {
+  aspect-ratio: 520/390;
+  object-fit: cover;
+}
+
+.time-table__list {
+  padding-bottom: 15px;
+  display: flex;
+  font-size: 13px;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid #adadad;
+  padding: 0 30px;
+  padding-bottom: 15px;
+
+  @media (min-width: 768px) {
+    /* 'md' breakpoint assumed to be 768px */
+    padding-bottom: 25px;
+    font-size: 16px;
+  }
+}
+
+.time-table__list + .time-table__list {
+  margin-top: 15px;
+  @media (min-width: 768px) {
+    margin-top: 25px;
+  }
+}
+
+.time-table__time {
+  max-width: 120px;
+  width: 100%;
+  flex-shrink: 0;
+  @media (min-width: 768px) {
+    max-width: 140px;
+  }
+}
+
+.time-table__description span {
+  font-weight: 900;
+}
+
+// swiper
+.js-swiper .swiper-button-prev::after {
+  // background-image: url(.././img/icon_arrow1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 45px;
+  margin: auto;
+  width: 40px;
+  content: "\f060";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 100;
+}
+/* 次への矢印カスタマイズ */
+.js-swiper .swiper-button-next::after {
+  // background-image: url(.././img/icon_arrow1.png);
+  transform: rotate(180deg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 45px;
+  margin: auto;
+  width: 40px;
+  content: "\f060";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 100;
+}
+
+// nurshomeの個別記事のswiperの矢印
+.swiperPhoto .swiper-button-prev {
+  left: 0;
+}
+.swiperPhoto .swiper-button-next {
+  right: 0;
+}
+
+// ホームでの暮らしのswiperの矢印
+.swiper-button-prev.swiper-athome {
+  width: 89px;
+  height: 89px;
+  background-color: #9b6930;
+  border-radius: 50%;
+}
+
+.swiper-button-next {
+  width: 89px;
+  height: 89px;
+  background-color: #9b6930;
+  border-radius: 50%;
+}
