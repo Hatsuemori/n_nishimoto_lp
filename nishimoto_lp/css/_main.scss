@@ -342,6 +342,9 @@ a {
 .blue {
     color: #333d80;
 }
+.yellow {
+    color: #ffe600;
+}
 
 .fsL {
     font-size: 100px;
@@ -1354,7 +1357,7 @@ p {
     margin-left: auto;
 }
 .cntM {
-    max-width: 1758px;
+    max-width: 1756px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -2193,38 +2196,39 @@ html.open {
 /*残す--ここまで*/
 
 /*お問い合わせページ------------------------------------*/
-
-/*お問い合わせページ------------------------------------*/
-
 .cform {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     tr {
-        margin-bottom: 1.5em;
+        margin-bottom: 1em;
         display: block;
         th,
         td {
             letter-spacing: 0.01em;
             text-align: left;
-            display: block;
-            width: 100%;
+            // display: block;
+            // width: 100%;
         }
         th {
+            vertical-align: middle;
+            width: 225px;
             margin-bottom: 0.5em;
+        }
+        td {
+            width: 755px;
         }
     }
     label {
         margin-right: 1.5em;
         span {
-            vertical-align: middle;
+            // vertical-align: middle;
             line-height: 1;
             display: inline-block;
         }
     }
     option,
     textarea,
-    select,
     input[type="text"],
     input[type="tel"],
     input[type="email"],
@@ -2254,38 +2258,318 @@ html.open {
             color: #c1c1c1;
         }
     }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #f6f6f6 !important;
+        border: unset !important;
+        border-radius: 2px !important;
+        padding: 1.4em 0.5em !important;
+        width: 49% !important;
+    }
     input[type="checkbox"] + span:before {
         font-family: "Font Awesome 5 Free";
         content: "";
         display: inline-block;
         margin-right: 0.5em;
         font-weight: 400;
+        margin-top: -4px;
     }
-    select {
-        width: 26%;
+    select#select-title {
+        width: 100%;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        padding: 1em;
+        font-size: 15px;
+        letter-spacing: 0.07em;
+        line-height: 1.4;
+        background-color: #f6f6f6;
     }
 
     .title {
-        font-weight: bold;
+        font-weight: 500;
+    }
+    .smallText {
+        font-size: f.myClamp(12, 13);
     }
     @include sp {
         tr {
             margin-bottom: 2em;
         }
+        tr,
+        th,
+        td {
+            display: block;
+            width: 100% !important;
+        }
+        select {
+            width: 100% !important;
+        }
+    }
+    @include tab {
+        th {
+            width: 260px !important;
+        }
+    }
+    @include note {
+        th {
+            width: 230px !important;
+        }
     }
 }
+
 .wpcf7-list-item {
     input {
-        margin-top: 5px;
+        margin-top: -3px;
     }
 }
+.thcomment {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
 .contactBlock {
-    border: solid 1px #000000;
-    padding: 0 1.5em;
+    border: solid 1px #dcdcdc;
+    border-radius: 15px;
+    padding: 2.5em 1.5em;
     @include sp {
-        padding: 0 1em;
+        border-radius: 10px;
+        padding: 2em 1.5em 2em 1.5em;
     }
 }
+.openBtn2 {
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    &::before {
+        opacity: 0;
+    }
+    &::after,
+    &::before {
+        position: absolute;
+        display: block;
+        font-family: "Font Awesome 6 Pro";
+        color: $mainColorSub;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 1;
+        right: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &::after {
+        content: "\f13a";
+    }
+    &::before {
+        content: "\f139";
+    }
+    &.on {
+        &::before {
+            opacity: 1;
+        }
+        &::after {
+            opacity: 0;
+        }
+    }
+    @include sp {
+        &::after,
+        &::before {
+            font-size: 20px;
+            right: 13px;
+            top: 59%;
+        }
+    }
+}
+
+.contactTitle {
+    font-size: clamp(18px, 1.6vw, 25px);
+    &.__small {
+        padding: 0;
+    }
+    letter-spacing: 0.05em;
+    line-height: 1;
+    font-weight: 600;
+}
+.contactList {
+    display: none;
+    margin-top: 40px;
+    padding-bottom: 1.5em;
+    > li {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 50%;
+            top: 10px;
+            left: 0;
+        }
+        span {
+            display: inline-block;
+            font-size: clamp(15px, 1vw, 16px);
+            padding-left: 1.2em;
+            font-weight: 500;
+            &.__nopadding {
+                padding-left: 0;
+            }
+        }
+    }
+    @include sp {
+        margin-top: 22px;
+        > li {
+            span {
+                padding-left: 0.9em;
+            }
+            &::after {
+                width: 7px;
+                height: 7px;
+                top: 12px;
+            }
+        }
+    }
+}
+.contactText {
+    font-size: 16px;
+    font-weight: 500;
+    &.__small {
+        font-size: 13px;
+    }
+}
+
+.required-srt {
+    color: #fff;
+    font-size: 13px;
+    padding: 0.1em 0.5em;
+    background-color: #b50d23;
+    border-radius: 5px;
+    margin: auto 0.7em;
+}
+
+.cform [type="submit"] {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    background: #ff8f00;
+    color: #fff;
+    border-bottom: solid 4px #b17c00;
+    border-radius: 3px;
+}
+#grad_year,
+#grad_month,
+#day_year,
+#day_month {
+    width: 10% !important;
+    #grad_year {
+        margin-right: 20px !important;
+    }
+    @include sp {
+        width: 30% !important;
+    }
+}
+#birthday {
+    width: 25% !important;
+    @include sp {
+        width: 48% !important;
+    }
+}
+
+#zip {
+    width: 15% !important;
+    @include sp {
+        width: 40% !important;
+    }
+}
+#pref {
+    margin-right: 2.5%;
+    @include sp {
+        margin-right: 0;
+    }
+}
+#city {
+    margin-left: 2.5%;
+    @include sp {
+        margin-left: 0;
+    }
+}
+
+#pref,
+#city {
+    width: 98% !important;
+    @include sp {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+}
+
+.contactAlertBox {
+    border: 1px solid #dcdcdc;
+    border-radius: 15px;
+    padding: 8% 5%;
+    margin: 3% 0;
+    @include sp {
+        padding: 8% 5%;
+        margin: 10px 0;
+    }
+}
+
+.contactAlertTitle {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.wpcf7-spinner {
+    display: none !important;
+}
+.submit-btn {
+    text-align: center;
+    // margin-top: 4%;
+    input {
+        transition: 0.3s;
+        font-size: 16px;
+        letter-spacing: 0.07em;
+        padding: 1.25em 2em;
+        background-color: #2c2c2c;
+        color: #fff;
+        cursor: pointer;
+        border: 1px solid transparent;
+        width: 100%;
+        // &:hover {
+        //     color: #2c2c2c;
+        //     background-color: #fff;
+        // }
+    }
+    @include sp {
+        input {
+            font-size: 14px;
+        }
+    }
+}
+
+.contactHr {
+    margin: 7% 0;
+    @include sp {
+        margin: 12% 0;
+    }
+}
+
+.wpcf7-response-output {
+    border: none !important;
+    line-height: 1.6;
+    color: #dc3232 !important;
+    text-align: center !important;
+}
+.wpcf7-response-output::before {
+    content: "※";
+}
+
 .openBtn {
     cursor: pointer;
     position: relative;
@@ -2339,159 +2623,6 @@ html.open {
         padding-left: 0;
     }
 }
-.contactList {
-    display: none;
-    margin-top: 10px;
-    padding-bottom: 1.5em;
-    > li {
-        position: relative;
-        &::after {
-            position: absolute;
-            content: "";
-            display: block;
-            width: 10px;
-            height: 10px;
-            background-color: #000;
-            border-radius: 50%;
-            top: 10px;
-            left: 0;
-        }
-        span {
-            display: inline-block;
-            font-size: clamp(15px, 1vw, 16px);
-            padding-left: 1.2em;
-            font-weight: 500;
-            &.__nopadding {
-                padding-left: 0;
-            }
-        }
-    }
-    @include sp {
-        margin-top: 0;
-        > li {
-            span {
-                padding-left: 0.9em;
-            }
-            &::after {
-                width: 7px;
-                height: 7px;
-                top: 12px;
-            }
-        }
-    }
-}
-.contactText {
-    font-size: 16px;
-    font-weight: 500;
-    &.__small {
-        font-size: 13px;
-    }
-}
-.formAdrress {
-    display: flex;
-}
-#pref {
-    margin-right: 1%;
-    @include sp {
-        margin-right: 0;
-        margin-bottom: 3%;
-    }
-}
-#city {
-    margin-left: 1%;
-    @include sp {
-        margin-left: 0;
-    }
-}
-
-#pref,
-#city {
-    width: 49%;
-    display: inline-block;
-    @include sp {
-        display: block;
-        width: 100%;
-    }
-}
-.thcomment {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.2;
-}
-.required-srt {
-    color: #fff;
-    font-size: 13px;
-    padding: 0.1em 0.5em;
-    background-color: #b50d23;
-    border-radius: 5px;
-    margin: auto 0.7em;
-}
-.wpcf7-spinner {
-    display: none;
-}
-.wpcf7-response-output {
-    border: none !important;
-    line-height: 1.6;
-    color: #dc3232 !important;
-    text-align: center !important;
-}
-.wpcf7-response-output::before {
-    content: "※";
-}
-.cform [type="submit"] {
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 30px;
-    text-decoration: none;
-    background: #ff8f00;
-    color: #fff;
-    border-bottom: solid 4px #b17c00;
-    border-radius: 3px;
-}
-
-.mw_wp_form .horizontal-item + .horizontal-item {
-    margin-left: 0 !important;
-}
-
-.contactAlertBox {
-    border: 1px solid #dcdcdc;
-    padding: 8% 5%;
-    margin: 3% 0;
-    @include sp {
-        padding: 12% 5%;
-        margin: 13% 0;
-    }
-}
-.contactAlertTitle {
-    font-size: 20px;
-    text-align: center;
-    font-weight: 500;
-    margin-bottom: 1.5em;
-}
-
-.submit-btn {
-    text-align: center;
-    // margin-top: 4%;
-    input {
-        transition: 0.3s;
-        font-size: 16px;
-        letter-spacing: 0.07em;
-        padding: 1.25em 2em;
-        color: #fff;
-        cursor: pointer;
-        width: 100%;
-        // &:hover {
-        //     color: #2c2c2c;
-        //     background-color: #fff;
-        // }
-    }
-    @include sp {
-        input {
-            font-size: 14px;
-        }
-    }
-}
-
 /*下層ページ共通------------------------------------*/
 
 .entry {

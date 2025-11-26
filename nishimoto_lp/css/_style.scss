@@ -245,77 +245,53 @@ main {
             0px -5px 5px #fff;
     }
 }
-.arrow_next {
-    position: relative;
-    &::after {
-        transition: 0.3s;
-        @include arrow;
-        content: "\f105";
-        font-size: 12px;
-        color: #fff;
-        right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
+
+.commonTitleWrap {
+    .topPhiloCard & {
+        top: 79%;
+        left: 50%;
     }
-    &:hover {
-        &::after {
-            color: #fff;
-            right: 8px;
-        }
-    }
+    position: absolute;
+    width: 100%;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.arrow_maru {
-    position: relative;
-    &::after {
-        transition: 0.3s;
-        @include content;
-        top: 50%;
-        right: 12px;
-        width: 30px;
-        height: 30px;
-        transform: translateY(-50%);
-        background-image: url(.././img/arrow_w.svg);
-        background-repeat: no-repeat;
-        background-size: 30px;
+.commonTitleJp {
+    font-size: f.myClamp(20, 40);
+    line-height: 1.4;
+    font-weight: bold;
+}
+.commonTitleEn {
+    .topPhiloCard & {
+        color: #fff;
+        margin-left: -38px;
     }
-    a:hover & {
-        &::after {
-            right: 8px;
-        }
+    .topFormCard & {
+        color: #fff;
+        opacity: 0.2;
     }
-    &:hover {
-        &::after {
-            right: 8px;
-        }
+    .topFaqCard & {
+        color: #fff;
     }
-    @include sp {
-        &.__sp {
-            &::after {
-                right: 0;
-            }
-        }
-        &::after {
-            right: 11px;
-            width: 30px;
-            height: 30px;
-            background-size: 30px;
-        }
+
+    font-size: f.myClamp(30, 150);
+    font-weight: 700;
+    font-family: $fontEn;
+    line-height: 1;
+    color: #e5eaf1;
+}
+.commonSubText {
+    &.__small {
+        font-size: f.myClamp(15, 16);
+        line-height: 1.6;
     }
-    @include tab {
-        &::after {
-            right: 9px;
-            width: 20px;
-            height: 20px;
-            background-size: 20px;
-        }
-    }
+    font-size: f.myClamp(16, 18);
+    line-height: 1;
+    font-weight: 600;
 }
 
 .commonBtn {
-    &.__large {
-        padding: 1.6em 0.5em;
-        width: 300px;
-    }
     font-size: f.myClamp(13, 14);
     font-weight: 500;
     text-align: center;
@@ -334,84 +310,8 @@ main {
         background-color: $mainColor;
         color: #fff;
     }
-    @include sp {
-        &.__large {
-            width: 275px;
-        }
-    }
 }
-.subBtnWrap {
-    margin: 0 3%;
-}
-.subBtn {
-    color: #fff;
-    font-size: f.myClamp(18, 25);
-    transition: 0.3s;
-    i {
-        font-weight: 900;
-    }
-    a:hover & {
-        margin-right: -8px;
-    }
-}
-.arrowWrap {
-    position: absolute;
-    width: 52px;
-    bottom: 13px;
-    right: 20px;
-    z-index: 9;
-    transition: 0.3s;
-    a:hover & {
-        right: 15px;
-    }
-    @include spTab {
-        right: 0;
-        img {
-            width: 60%;
-        }
-        a:hover & {
-            right: -5px;
-        }
-    }
-}
-.commonMidashiWrap {
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    transform: translateY(-50%);
-}
-.titleImg {
-    border-radius: 7px;
-}
-.commonMidashi_5 {
-    font-size: f.myClamp(18, 26);
-    padding: 0.9em 1em;
-    letter-spacing: 0.1em;
-    font-weight: 500;
-    line-height: 1.3;
-    color: #fff;
-    position: relative;
-    &::after {
-        @include content;
-        width: 100%;
-        height: 100%;
-        top: 50%;
-        left: 50%;
-        border-radius: 7px;
-        transform: translate(-50%, -50%);
-        background-image: url(.././img/title.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: -1;
-    }
-    @include sp {
-        padding: 0.8em 1em;
-        &::after {
-            border-radius: 5px;
-            background-image: url(.././img/title_sp.svg);
-        }
-    }
-}
+
 .commonMidashi_1 {
     font-size: f.myClamp(18, 30);
     padding: 0.6em 0 0.6em 1em;
@@ -433,100 +333,14 @@ main {
         z-index: -1;
     }
 }
-.commonMidashi_2 {
-    &.__small {
-        font-size: f.myClamp(18, 26);
-    }
-    font-size: f.myClamp(22, 30);
-    padding-left: 1em;
-    letter-spacing: 0.1em;
-    line-height: 1.3;
-    font-weight: 600;
-    color: $mainColor;
-    position: relative;
-    &::after {
-        @include content;
-        width: 5px;
-        height: 100%;
-        background-color: $mainColor;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-.commonMidashi_3 {
-    font-size: f.myClamp(18, 24);
-    line-height: 1.6;
-    &.__small {
-        font-size: f.myClamp(17, 20);
-    }
-    &.__xsmall {
-        font-size: f.myClamp(16, 18);
-    }
 
-    font-weight: 500;
-    color: $mainColor;
-}
-.commonMidashi_4 {
-    &.__small {
-        font-size: f.myClamp(18, 22);
-        letter-spacing: 0.06em;
-    }
-    &.__Xsmall {
-        font-size: f.myClamp(15, 20);
-        letter-spacing: 0.06em;
-    }
-
-    &.__large {
-        font-size: f.myClamp(24, 34);
-        letter-spacing: 0.06em;
-    }
-
-    font-size: f.myClamp(20, 26);
-    font-weight: 600;
-    @include sp {
-        .mahBlock & {
-            font-size: 18px;
-            text-align: left;
-        }
-        &.__small {
-            letter-spacing: 0.03em;
-        }
-    }
-    @include note {
-        &.__small {
-            font-size: 18px;
-        }
-    }
-}
-.smallText {
-    font-size: f.myClamp(14, 15);
-    line-height: 1.4;
-}
-.textWrap {
-    width: 47%;
-    margin-inline: auto;
-    @include spTab {
-        width: 100%;
-    }
-    @include tab {
-        width: 78%;
-    }
-    @include note {
-        width: 100%;
-    }
-}
 .commonText {
-    &.__small {
-        font-size: f.myClamp(15, 16);
+    &.__lh {
         line-height: 2;
     }
-    font-size: f.myClamp(16, 18);
+    font-size: f.myClamp(15, 16);
     font-weight: 500;
-    line-height: 2.2;
-    @include sp {
-        line-height: 2;
-    }
+    line-height: 1.6;
 }
 .textComent {
     text-indent: 1em;
@@ -601,152 +415,28 @@ ul {
 }
 
 .commonList {
-    padding-left: 1.5em;
-    letter-spacing: 0.09em;
-    &.__lh {
-        > li {
-            &:not(:last-child) {
-                margin-bottom: 27px;
-            }
-        }
-    }
-    &.__large {
-        > li {
-            &:not(:last-child) {
-                margin-bottom: 2%;
-            }
-            font-size: f.myClamp(18, 20);
-            font-weight: 600;
-            line-height: 2.5;
-            dd {
-                line-height: 1.6;
-                font-size: f.myClamp(15, 16);
-                font-weight: 400;
-                margin-left: 0;
-                text-indent: unset;
-            }
-        }
-    }
-    > li {
-        list-style-type: decimal !important;
-        font-size: f.myClamp(15, 16);
-        line-height: 1.8;
-        &:not(:last-child) {
-            margin-bottom: 5px;
-        }
-        dd {
-            text-indent: -0.8em;
-            margin-left: 0.6em;
-            line-height: 1.5;
-        }
-    }
-    @include sp {
-        &.__large {
-            > li {
-                &:not(:last-child) {
-                    margin-bottom: 5%;
-                }
-                line-height: 1.6;
-            }
-        }
-        > li {
-            line-height: 1.4;
-            &:not(:last-child) {
-                margin-bottom: 7px;
-            }
-        }
-    }
-    @include tab {
-        > li {
-            line-height: 1.4;
-            &:not(:last-child) {
-                margin-bottom: 7px;
-            }
-        }
-    }
-    @include note {
-        > li {
-            line-height: 1.6;
-            &:not(:last-child) {
-                margin-bottom: 7px;
-            }
-        }
-    }
-}
-.commonList2 {
-    &.__grid2 {
-        width: 65%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 10px;
-    }
-    &.__normal {
-        > li {
-            padding-left: 0;
-            &::after {
-                display: none;
-            }
-        }
-    }
-    > li {
-        &:not(:last-child) {
-            margin-bottom: 11px;
-        }
-        position: relative;
-        padding-left: 1em;
-        font-size: f.myClamp(15, 16);
+    row-gap: 10px;
+    flex-direction: column;
+    span {
+        display: block;
+        font-size: f.myClamp(14, 15);
         line-height: 1.4;
+        font-weight: 500;
+        position: relative;
+        padding-left: 0.8em;
         &::after {
             @include content;
+            left: 0;
+            top: 8px;
             width: 8px;
             height: 8px;
             background-color: $mainColor;
             border-radius: 50%;
-            left: 0;
-            top: 7px;
-        }
-    }
-    @include sp {
-        > li {
-            padding-left: 0.8em;
-            &::after {
-                width: 6px;
-                height: 6px;
-                top: 9px;
-            }
-        }
-        &.__grid2 {
-            display: block;
-            width: 100%;
-            > li {
-                &:not(:last-child) {
-                    margin-bottom: 2px;
-                }
-            }
-        }
-    }
-    @include tabNote {
-        &.__grid2 {
-            grid-template-columns: 1fr 0.7fr;
-            width: 100%;
         }
     }
 }
 .commontitle_line span {
     background: linear-gradient(transparent 65%, rgb(255, 241, 0) 0%);
-}
-.__backGray {
-    padding: 7em 0;
-    background-image: url(.././img/back_gray.jpg);
-    @include sp {
-        padding: 3em 0;
-    }
-    @include tab {
-        padding: 4em 0;
-    }
-    @include note {
-        padding: 4em 0;
-    }
 }
 .center_position {
     position: absolute;
@@ -754,88 +444,6 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-.businMenuList {
-    &.__grid1 {
-        width: 70%;
-        margin-inline: auto;
-        grid-template-columns: 1fr;
-    }
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
-    @include sp {
-        display: block;
-        > li {
-            &:not(:last-child) {
-                margin-bottom: 5%;
-            }
-        }
-        &.__grid1 {
-            width: 100%;
-            margin-inline: auto;
-        }
-    }
-    @include tab {
-        &.__grid1 {
-            width: 90%;
-        }
-        width: 72%;
-        margin-inline: auto;
-        display: block;
-        > li {
-            &:not(:last-child) {
-                margin-bottom: 5%;
-            }
-        }
-    }
-
-    @include note {
-        &.__grid1 {
-            width: 90%;
-        }
-        width: 64%;
-        margin-inline: auto;
-        display: block;
-        > li {
-            &:not(:last-child) {
-                margin-bottom: 5%;
-            }
-        }
-    }
-}
-.businMenuImg {
-    position: absolute;
-    &::after {
-        @include content;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(0 0 0 / 0.5);
-        top: 0;
-        left: 0;
-    }
-}
-.businMenuWrap {
-    position: relative;
-    padding: 3.2em 1em;
-    .__grid1 & {
-        padding: 6.2em 1em 2em;
-    }
-    z-index: 2;
-    @include sp {
-        padding: 1.5em 1em;
-        .__grid1 & {
-            padding: 3.2em 1em 0.5em;
-        }
-    }
-    @include tab {
-        padding: 2em 1em;
-    }
-}
-.businMenuTitle {
-    font-size: f.myClamp(18, 28);
-    line-height: 1.8;
-    font-weight: 500;
 }
 .commonTable {
     width: 100%;
@@ -945,62 +553,6 @@ ul {
         }
     }
 }
-.commonTable2 {
-    width: 100%;
-    th,
-    td {
-        font-size: f.myClamp(15, 16);
-        line-height: 1.8;
-        padding: 0.4em 0.5em;
-    }
-    td {
-        border-top: solid 1px #d6d6d6;
-    }
-    th {
-        width: 30%;
-        color: $mainColor;
-        font-weight: 500;
-        text-align: left;
-        border-top: solid 1px $mainColor;
-    }
-    tr {
-        &:last-child {
-            td {
-                border-bottom: solid 1px #d6d6d6;
-            }
-            th {
-                border-bottom: solid 1px $mainColor;
-            }
-        }
-    }
-    @include sp {
-        width: 400px;
-        margin-left: 15px;
-        margin-right: 15px;
-        th,
-        td {
-            padding: 0.4em;
-        }
-        th {
-            width: 10%;
-        }
-        td {
-            width: 4%;
-        }
-    }
-    @include tab {
-        width: 100%;
-        th {
-            width: 37%;
-        }
-    }
-    @include note {
-        width: 100%;
-        th {
-            width: 36%;
-        }
-    }
-}
 .back_white {
     background-color: #fff;
     padding: 4em 0;
@@ -1083,7 +635,7 @@ ul {
                 display: block;
                 font-family: "Font Awesome 6 Pro";
                 content: "\f138";
-                font-weight: 900;
+                font-weight: bold;
                 font-size: 20px;
                 right: 12px;
                 top: 50%;
@@ -1604,7 +1156,9 @@ header {
  * header
  *================================================*/
 .topFvImg {
-    padding-bottom: clamp(800px, 42%, 806px);
+    padding-bottom: clamp(300px, 42%, 806px);
+    position: relative;
+    z-index: -2;
     @include sp {
         padding-bottom: 174%;
         background-image: url(.././img/topFv_sp.jpg) !important;
@@ -1625,47 +1179,74 @@ header {
         right: 42px;
     }
 }
+.topFvWrap {
+    max-width: 886px;
+    padding: 0 97px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.topAwardBlock {
+    width: 57%;
+    margin-inline: auto;
+}
 .topFvTitle {
-    max-width: 380px;
-    dt {
+    font-size: f.myClamp(30, 57);
+    line-height: 1.3;
+    font-weight: 600;
+}
+.toplogoBlock {
+    width: 646px;
+    background-color: #fff;
+    padding: 1em 1em;
+    border-radius: 5px;
+}
+.topFvBtnWrap {
+    position: absolute;
+    padding: 0 87px;
+    right: 0;
+    bottom: 15%;
+}
+.topFvBtn {
+    display: block;
+    font-size: f.myClamp(20, 37);
+    padding: 0.5em 3.6em 0.7em 1em;
+    border-radius: 50px;
+    background: linear-gradient(to right, #af0000 0%, #e50000 100%);
+    line-height: 1;
+    font-weight: bold;
+    transition: 0.3s;
+    &::after {
+        @include content;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background: linear-gradient(to right, #480000 0%, #e50000 100%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: 0.3s;
+    }
+    sub {
+        color: #ffe600;
+        font-weight: bold;
+        line-height: 1;
+    }
+    &:hover {
         color: #fff;
-        font-size: f.myClamp(43, 64);
-        letter-spacing: 0.1em;
-        font-weight: 600;
-        line-height: 1.4;
-        margin-left: 20px;
-        writing-mode: vertical-rl;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    dd {
-        color: #fff;
-        font-size: f.myClamp(16, 18);
-        letter-spacing: 0.1em;
-        line-height: 2.3;
-        font-weight: 500;
-        writing-mode: vertical-rl;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    @media screen and (max-width: 1500px) {
-        dd {
-            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-        }
-    }
-    @include sp {
-        dd {
-            text-shadow: unset;
-        }
-    }
-    @include tabNote {
-        dt,
-        dd {
-            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+        background: #232323;
+        &::after {
+            top: 7px;
         }
     }
 }
-
+.topbtnImgWrap {
+    position: absolute;
+    width: 279px;
+    top: -73px;
+    right: 0;
+    z-index: 0;
+}
 /*==================================================
  * pagenation*/
 
@@ -1738,7 +1319,7 @@ footer {
     &::after {
         @include arrow;
         content: "\f077";
-        font-weight: 900;
+        font-weight: bold;
         font-size: 20px;
         color: #fff;
         top: 50%;
@@ -1897,8 +1478,561 @@ footer {
         font-size: 13px;
     }
 }
-
-.textWrap {
+.topVideoWrap {
     position: relative;
-    z-index: 1;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+/*==================================================
+ * よくある問題
+ *================================================*/
+.topProblemInnerBlock {
+    padding: 4em 0;
+}
+.problemList {
+    column-gap: 18px;
+    > li {
+        width: calc((100% - 36px) / 3);
+        background-color: #fff;
+    }
+}
+.problemTextBox {
+    padding: 1.5em;
+}
+.problemImg {
+    padding-bottom: 50%;
+}
+.problemTitle {
+    font-size: f.myClamp(18, 20);
+    font-weight: bold;
+    line-height: 1;
+}
+.problemNbBlock {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+}
+.problemNbText {
+    font-size: f.myClamp(14, 15);
+    line-height: 0.8;
+    font-weight: bold;
+}
+.problemNbBox {
+    width: 80px;
+    height: 80px;
+    background-color: $mainColor;
+    border-radius: 50%;
+}
+.problemNb {
+    font-size: f.myClamp(20, 28);
+    line-height: 1.2;
+    font-weight: bold;
+}
+.problemNbWrap {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.arrowWrap {
+    width: 9%;
+    margin-inline: auto;
+}
+.solutionBox {
+    margin-top: -21px;
+    width: 60%;
+    margin-inline: auto;
+    padding: 1.8em 2em;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: solid 2px #fff;
+}
+.solutionText {
+    font-size: f.myClamp(18, 20);
+    line-height: 1.5;
+    font-weight: 600;
+}
+/*==================================================
+ * 私たちの強み
+ *================================================*/
+.meritImgWrap {
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.meritList {
+    column-gap: 42px;
+    > li {
+        width: calc((100% - 42px) / 2);
+        padding: 0 3em 3em;
+        border: solid 1px $mainColor;
+    }
+}
+.meritLogoWrap {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.meritBox {
+    width: 460px;
+    padding: 0.6em 0.5em 0.5em;
+    background-color: $mainColor;
+    border-radius: 50px;
+    margin-inline: auto;
+    span {
+        font-size: f.myClamp(18, 20);
+        font-weight: 600;
+        line-height: 1;
+        color: #ffe600;
+    }
+}
+.meritTitle {
+    font-size: f.myClamp(20, 30);
+    line-height: 1.2;
+    font-weight: bold;
+}
+.systemImgBlock {
+    width: 50%;
+    margin-right: 5%;
+}
+.systemInfoBlock {
+    width: 45%;
+}
+.meritImg {
+    padding-bottom: 33%;
+}
+.meritSubTitle {
+    font-size: f.myClamp(18, 24);
+    line-height: 1.2;
+    font-weight: bold;
+}
+.systemlist {
+    row-gap: 23px;
+    flex-direction: column;
+}
+/*==================================================
+ * contact
+ *================================================*/
+.conCard {
+    padding: 2.5em 0;
+    position: relative;
+    &::after {
+        @include content;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(.././img/contact_back.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -2;
+    }
+}
+.conTitle {
+    dt {
+        font-size: f.myClamp(30, 50);
+        line-height: 1.2;
+        font-weight: bold;
+        color: #fff;
+    }
+    dd {
+        font-size: f.myClamp(30, 80);
+        line-height: 1.2;
+        font-weight: bold;
+        color: $subColor;
+    }
+}
+.conSubBox {
+    width: fit-content;
+    margin-inline: auto;
+    position: relative;
+    &::before,
+    &::after {
+        @include content;
+        top: 62%;
+        width: 14.5px;
+        height: 26.5px;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-size: 14.5px;
+    }
+    &::before {
+        left: -28px;
+        background-image: url(.././img/left.svg);
+    }
+    &::after {
+        right: -28px;
+        background-image: url(.././img/right.svg);
+    }
+}
+.conSubText {
+    font-size: f.myClamp(18, 22);
+    line-height: 1.2;
+    font-weight: bold;
+}
+.conBtn {
+    width: 500px;
+    padding: 0.2em 2em 0.3em;
+    color: $subColor;
+    border-radius: 80px;
+    font-size: f.myClamp(45, 50);
+    line-height: 1;
+    font-weight: bold;
+    background: linear-gradient(to right, #af0000 0%, #e50000 100%);
+    box-shadow: 2px 1px 6px 5px rgb(0 0 0 / 0.3);
+    transition: 0.3s;
+    position: relative;
+    &::after {
+        @include content;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background: linear-gradient(to right, #480000 0%, #e50000 100%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: 0.3s;
+    }
+    &:hover {
+        color: #fff;
+        background: #232323;
+        &::after {
+            top: 7px;
+        }
+    }
+}
+.conImgWrap {
+    position: absolute;
+    width: 20%;
+    right: 33px;
+    top: 22px;
+}
+.commonSubTextWrap {
+    margin-top: -37px;
+    position: relative;
+    z-index: 2;
+}
+/*==================================================
+ * 解決事例
+ *================================================*/
+
+.solutionList {
+    position: relative;
+    z-index: 2;
+    column-gap: 85px;
+    > li {
+        display: flex;
+        flex-direction: column;
+        width: calc((100% - 85px) / 2);
+    }
+}
+.solutionTitle {
+    font-size: f.myClamp(18, 22);
+    line-height: 1;
+    font-weight: bold;
+    color: $mainColor;
+}
+.solutionTableList {
+    > li {
+        width: 50%;
+    }
+}
+.solutionTable {
+    width: 100%;
+    th,
+    td {
+        font-size: f.myClamp(15, 16);
+        line-height: 1;
+        padding: 1.1em 0.5em;
+        text-align: left;
+        border-top: solid 1px #bdbdbd;
+    }
+    th {
+        width: 27%;
+        color: $mainColor;
+        font-weight: bold;
+    }
+    td {
+        width: 73%;
+        font-weight: 500;
+    }
+}
+/*==================================================
+ * 代表メッセージ
+ *================================================*/
+.PhiloBackImgWrap {
+    position: absolute;
+    top: -1240px;
+    left: 0;
+}
+.subjectList {
+    column-gap: 18px;
+    > li {
+        width: calc((100% - 18px) / 2);
+        padding: 1.5em 1em;
+        &:nth-child(1) {
+            background-color: #f0f0f0;
+        }
+        &:nth-child(2) {
+            background-color: #e5eaf1;
+        }
+    }
+}
+.subjectTitle {
+    font-size: f.myClamp(16, 18);
+    line-height: 1;
+    font-weight: bold;
+    color: $mainColor;
+}
+.subjectListImgWrap {
+    position: absolute;
+    width: 4%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.subjectBox {
+    flex-grow: 1;
+    padding: 1.2em;
+    border: solid 3px #b2c1d6;
+    background-color: #fff;
+}
+
+.topPhiloCard {
+    margin-top: -6%;
+    position: relative;
+    &::after {
+        @include content;
+        top: -52px;
+        left: 50%;
+        width: 1920px;
+        height: 266px;
+        transform: translateX(-50%);
+        background-image: url(.././img/white_back.svg);
+        background-repeat: no-repeat;
+        background-size: 1920px;
+    }
+}
+.philoInfoBlock {
+    width: 50%;
+    background-color: #f0f0f0;
+}
+.philoImg {
+    width: 50%;
+    padding-bottom: 43%;
+}
+.philoInfoBox {
+    padding: 15em 3.5em 2em 18em;
+}
+.philoInfoTitleWrap {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-left: -34px;
+}
+/*==================================================
+ * ご契約の流れ
+ *================================================*/
+.flowList {
+    width: 62%;
+    margin-inline: auto;
+    row-gap: 28px;
+    flex-direction: column;
+    counter-reset: number;
+    > li {
+        counter-increment: number 1;
+        border-radius: 7px;
+        position: relative;
+        background-color: #fff;
+        &:not(:last-child) {
+            &::after {
+                @include content;
+                bottom: -38px;
+                left: 50%;
+                width: 76px;
+                height: 37px;
+                transform: translateX(-50%);
+                background-image: url(.././img/yajirushi_bl.svg);
+                background-repeat: no-repeat;
+                background-size: 76px;
+                z-index: 2;
+            }
+        }
+        &:nth-child(odd) {
+            border: solid 1px #003277;
+        }
+        &:nth-child(even) {
+            border: solid 1px #26a3ff;
+        }
+    }
+}
+.flowInnerBox {
+    padding: 1.8em 0.5em;
+}
+.flowTitle {
+    font-size: f.myClamp(20, 24);
+    line-height: 1;
+    font-weight: bold;
+}
+.flowNbBoxWrap {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+}
+
+.flowNbBox {
+    .__blue & {
+        background-color: $mainColorSub;
+    }
+    width: 64px;
+    height: 64px;
+    background-color: $mainColor;
+    border-radius: 50%;
+    position: relative;
+    &::after {
+        @include content;
+        content: "0" counter(number);
+        font-size: f.myClamp(20, 30);
+        color: #fff;
+        font-weight: 700;
+        line-height: 1;
+        font-family: $fontEn;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+/*==================================================
+ * ご契約の流れ
+ *================================================*/
+.topFaqCard {
+    padding: 3em 0 4em;
+    background-color: #f0f0f0;
+}
+.qaList {
+    row-gap: 10px;
+    flex-direction: column;
+    > li {
+        border-radius: 7px;
+        background-color: #fff;
+    }
+}
+.openBtn {
+    cursor: pointer;
+    padding: 2.3em 4.3em 2.3em 1.7em;
+    position: relative;
+    dt {
+        font-size: f.myClamp(18, 20);
+        line-height: 1;
+        font-weight: bold;
+        color: $mainColor;
+    }
+    &::before {
+        opacity: 0;
+    }
+    transition: 0.3s ease-in-out;
+    &::after,
+    &::before {
+        @include content;
+        transition: 0.3s ease-in-out;
+        top: 50%;
+        right: 25px;
+        width: 48px;
+        height: 48px;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-size: 48px;
+    }
+    &.__first {
+        &::after {
+            background-image: url(.././img/open.svg);
+        }
+        &::before {
+            background-image: url(.././img/close.svg);
+        }
+    }
+    &::after {
+        background-image: url(.././img/close.svg);
+    }
+    &::before {
+        background-image: url(.././img/open.svg);
+    }
+    &.on {
+        &::before {
+            opacity: 1;
+        }
+        &::after {
+            opacity: 0;
+        }
+    }
+    @include sp {
+        padding: 1em 0.5em 1em 1em;
+        &::after,
+        &::before {
+            top: 28px;
+            width: 48px;
+            height: 48px;
+            background-size: 48px;
+            right: 9px;
+        }
+    }
+}
+.qaInner {
+    .__first & {
+        display: block;
+    }
+    display: none;
+    background-color: #fff;
+    padding: 2em 1.7em 2em 1.7em;
+    position: relative;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    &::after {
+        @include content;
+        width: 96%;
+        height: 1px;
+        background-color: #bdbdbd;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .on & {
+        display: block;
+    }
+    dt {
+        font-size: f.myClamp(15, 16);
+        line-height: 1.4;
+        font-weight: 500;
+    }
+    @include sp {
+        padding: 1.2em 0.3em 1.2em 1.2em;
+        dd {
+            padding: 0 1em 0 1em;
+        }
+    }
+}
+
+.topFormCard {
+    background-color: $mainColor;
+    padding: 2em 0;
+}
+
+.contactForm {
+    margin-inline: auto;
+    width: fit-content;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 7px;
 }

@@ -73,7 +73,7 @@ $cautionColor: #e60110;
     background-color: $mainColorUlLight;
 }
 
-$subColor: #443b24;
+$subColor: #ffe600;
 .subColor {
     color: $subColor;
 }
@@ -131,7 +131,7 @@ $bdColor: #f2f2f4;
 }
 
 .bgBlack {
-    background: #000;
+    background: #232323;
 }
 .bgWhite {
     background: #fff;
@@ -197,7 +197,7 @@ $fontNum: "Inter", sans-serif;
 //     font-family: $fontJp;
 // }
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&display=swap");
 $serif: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 .serif {
     font-family: $serif;

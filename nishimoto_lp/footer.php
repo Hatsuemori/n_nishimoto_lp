@@ -1,4 +1,3 @@
-<?php get_template_part('parts/assets/contact'); ?>
 </main>
 
 

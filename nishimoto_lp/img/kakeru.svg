@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103.39 103.39">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #003277;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.39px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: 33.9px;
+      }
+    </style>
+  </defs>
+  <g id="_メインコンテンツ" data-name="メインコンテンツ">
+    <g>
+      <g>
+        <line class="cls-2" x1="1.69" y1="1.69" x2="101.69" y2="101.69"/>
+        <line class="cls-2" x1="101.69" y1="1.69" x2="1.69" y2="101.69"/>
+      </g>
+      <g>
+        <line class="cls-1" x1="1.69" y1="1.69" x2="101.69" y2="101.69"/>
+        <line class="cls-1" x1="101.69" y1="1.69" x2="1.69" y2="101.69"/>
+      </g>
+    </g>
+  </g>
+</svg>

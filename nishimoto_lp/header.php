@@ -80,7 +80,7 @@
           </div>
           <div class="headerTopMenuBlock">
                <div class="topContactWrap flex alignCenter justEnd flexWrap mbS3">
-                    <a class="topTel">073-455-1311</a>
+                    <a class="topTel"><?php info('tel'); ?></a>
                     <a href="" class="topBtn">無料見積はこちら</a>
                </div>
                <div class="headerMenuCardBlock">
