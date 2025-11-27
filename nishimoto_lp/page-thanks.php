@@ -1,8 +1,18 @@
 <?php get_header(); ?>
 
 <section class="commonFvCard">
-     <div class="commonFvTextWrap text-center">
-          <h1 class="commonFvTitle"><?php the_title(); ?></h1>
+     <div class="relative">
+          <div class="bgImg commonFvImg"
+               style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/commonFv.jpg'">
+               <div class="commonFvWrap">
+                    <div class="cnt cntS">
+                         <div class="white" data-aos="fade-right">
+                              <h1 class="commonFvTitleJp mbS3 mbSpS2">送信完了</h1>
+                              <p class="commonFvTitleEn">THANKS</p>
+                         </div>
+                    </div>
+               </div>
+          </div>
      </div>
 </section>
 <div class="breadBrock">
@@ -13,22 +23,15 @@
      </div>
 </div>
 
-<section class="back_white2">
+<section class="margin">
      <div class="cnt cntXS">
-          <div class="mb50 text-center">
-               <div class="contactTitle mbS">お問い合わせありがとうございます</div>
-               <p class="contactText mbS2">
-                    自動返信メールを送信しておりますので、ご確認ください。<br class="pc">メールが届いていない場合、「迷惑メールに分類されてしまっている」<br
-                         class="pc">「ご記入いただいたメールアドレスが間違っている」などの原因が考えられます。）<br>数営業日以内に、弊社担当者よりご連絡させていただきます。
-               </p>
-               <p class="contactText">
-                    なお、内容によって、ご返信できない場合もございます。ご了承ください。
+          <div class="mb50">
+               <div class="contactTitle mbS text-center">お問い合わせありがとうございます。</div>
+               <p class="contactText text-center text-left-sp">
+                    お問い合わせありがとうございます。<br>近日中に弊社の担当者よりご連絡させていただきます。
                </p>
           </div>
-          <div class="contactForm">
-               <?php the_content(); ?>
-          </div>
-          <a class="commonBtn __large box-center arrow_maru" href="<?php echo home_url(); ?>">TOPへ戻る</a>
+          <a class="commonBtn" href="<?php echo home_url(); ?>">TOPへ戻る</a>
      </div>
 </section>
 

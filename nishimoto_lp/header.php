@@ -78,10 +78,10 @@
                     <?php endif; ?>
                </div>
           </div>
-          <div class="headerTopMenuBlock">
+          <div class="headerTopMenuBlock Menu_p">
                <div class="topContactWrap flex alignCenter justEnd flexWrap mbS3">
                     <a class="topTel"><?php info('tel'); ?></a>
-                    <a href="" class="topBtn">無料見積はこちら</a>
+                    <a href="<?php echo home_url(); ?>/#sec_form" class="topBtn">無料見積はこちら</a>
                </div>
                <div class="headerMenuCardBlock">
                     <div class="headerMenuCardWrap flex alignCenter justEnd">
@@ -107,13 +107,9 @@
                     <ul class="overRayMenuUl">
                          <?php get_template_part('parts/assets/menu_sp'); ?>
                     </ul>
-                    <ul class="headerBtnList text-center">
-                         <li>
-                              <div class="jp_content">
-                                   <a class="headerBtn" href="<?php echo home_url(); ?>/contact/">お問い合わせ</a>
-                              </div>
-                         </li>
-                    </ul>
+                    <div class="text-center">
+                         <a class="overRayBtn" href="<?php echo home_url(); ?>/#sec_form">無料見積もり</a>
+                    </div>
                </div>
           </div>
           <div class="all_fixed_nav_bg"></div>

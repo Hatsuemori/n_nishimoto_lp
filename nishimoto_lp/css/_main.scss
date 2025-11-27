@@ -949,7 +949,14 @@ p {
         display: none !important;
     }
 }
-
+.pc3 {
+    display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .pc3 {
+        display: block;
+    }
+}
 @media screen and (min-width: 768px) and (max-width: 959px) {
     .notTab {
         display: none !important;
@@ -1106,6 +1113,9 @@ p {
     .mbSpL4 {
         margin-bottom: 15%;
     }
+    .mbSpL5 {
+        margin-bottom: 13%;
+    }
     .mbSpM {
         margin-bottom: 10%;
     }
@@ -1119,7 +1129,9 @@ p {
     .mbSpS {
         margin-bottom: 3.5%;
     }
-
+    .mbSpS1 {
+        margin-bottom: 2.5%;
+    }
     .mbSpS2 {
         margin-bottom: 2%;
     }
@@ -1303,6 +1315,11 @@ p {
         width: 40%;
     }
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .flexTabNote {
+        display: block;
+    }
+}
 
 /*横幅*/
 
@@ -1387,7 +1404,7 @@ p {
     margin-right: -15px;
 }
 :root {
-    --spaceSize: clamp(50px, 3.5vw, 63px);
+    --spaceSize: clamp(25px, 3.5vw, 63px);
     --spaceSizeMiddle: clamp(50px, 7.5vw, 144px);
     --spaceSizeSMiddle: clamp(65px, 4.5vw, 90px);
     --spaceSizeWide: clamp(135px, 14vw, 270px);
@@ -1932,13 +1949,12 @@ html.open {
     position: fixed;
     cursor: pointer;
     z-index: 998;
-    right: 18px;
-    top: 21px;
+    right: 0;
+    top: 0;
     height: 56px;
     width: 56px;
-    border-radius: 50%;
     border: none;
-    background-color: $mainColorSub;
+    background-color: $mainColor;
     span {
         &:after {
             content: attr(data-txt-menu);
@@ -1950,7 +1966,7 @@ html.open {
     @include sp {
         height: 56px;
         .change-color & {
-            top: 23px;
+            top: 0;
             width: 48px;
             height: 48px;
         }
@@ -2201,7 +2217,9 @@ html.open {
     margin-left: auto;
     margin-right: auto;
     tr {
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
+        padding-bottom: 1em;
+        border-bottom: solid 1px #d3d3d3;
         display: block;
         th,
         td {
@@ -2238,31 +2256,32 @@ html.open {
         border: 1px solid transparent;
         border-radius: 2px;
         padding: 1em;
-        font-size: 15px;
+        font-size: 16px;
         letter-spacing: 0.07em;
         line-height: 1.4;
-        background-color: #f6f6f6;
+        background-color: #ececec;
+        border-radius: 5px;
         &::-webkit-input-placeholder {
-            color: #c1c1c1;
+            color: #ececec;
         }
         &::-moz-placeholder {
-            color: #c1c1c1;
+            color: #ececec;
         }
         &:-ms-input-placeholder {
-            color: #c1c1c1;
+            color: #ececec;
         }
         &::-ms-input-placeholder {
-            color: #c1c1c1;
+            color: #ececec;
         }
         &::placeholder {
-            color: #c1c1c1;
+            color: #ececec;
         }
     }
     select {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        background-color: #f6f6f6 !important;
+        background-color: #ececec !important;
         border: unset !important;
         border-radius: 2px !important;
         padding: 1.4em 0.5em !important;
@@ -2281,14 +2300,15 @@ html.open {
         border: 1px solid transparent;
         border-radius: 2px;
         padding: 1em;
-        font-size: 15px;
+        font-size: 16px;
         letter-spacing: 0.07em;
         line-height: 1.4;
         background-color: #f6f6f6;
     }
 
     .title {
-        font-weight: 500;
+        font-weight: bold;
+        color: $mainColor;
     }
     .smallText {
         font-size: f.myClamp(12, 13);
@@ -2309,133 +2329,31 @@ html.open {
     }
     @include tab {
         th {
-            width: 260px !important;
+            width: 290px !important;
         }
     }
     @include note {
         th {
-            width: 230px !important;
+            width: 273px !important;
         }
     }
 }
 
 .wpcf7-list-item {
     input {
-        margin-top: -3px;
+        margin-top: -1px;
+    }
+    span {
+        font-weight: 500;
+        font-size: 14px;
     }
 }
-.thcomment {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.2;
-}
-
-.contactBlock {
-    border: solid 1px #dcdcdc;
-    border-radius: 15px;
-    padding: 2.5em 1.5em;
-    @include sp {
-        border-radius: 10px;
-        padding: 2em 1.5em 2em 1.5em;
-    }
-}
-.openBtn2 {
-    cursor: pointer;
-    position: relative;
-    transition: 0.3s ease-in-out;
-    position: relative;
-    &::before {
-        opacity: 0;
-    }
-    &::after,
-    &::before {
-        position: absolute;
-        display: block;
-        font-family: "Font Awesome 6 Pro";
-        color: $mainColorSub;
-        font-weight: 900;
-        font-size: 28px;
-        line-height: 1;
-        right: 40px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    &::after {
-        content: "\f13a";
-    }
-    &::before {
-        content: "\f139";
-    }
-    &.on {
-        &::before {
-            opacity: 1;
-        }
-        &::after {
-            opacity: 0;
-        }
-    }
-    @include sp {
-        &::after,
-        &::before {
-            font-size: 20px;
-            right: 13px;
-            top: 59%;
-        }
-    }
-}
-
-.contactTitle {
-    font-size: clamp(18px, 1.6vw, 25px);
-    &.__small {
-        padding: 0;
-    }
-    letter-spacing: 0.05em;
-    line-height: 1;
-    font-weight: 600;
-}
-.contactList {
-    display: none;
-    margin-top: 40px;
-    padding-bottom: 1.5em;
-    > li {
-        position: relative;
-        &::after {
-            position: absolute;
-            content: "";
-            display: block;
-            width: 10px;
-            height: 10px;
-            background-color: #000;
-            border-radius: 50%;
-            top: 10px;
-            left: 0;
-        }
-        span {
-            display: inline-block;
-            font-size: clamp(15px, 1vw, 16px);
-            padding-left: 1.2em;
-            font-weight: 500;
-            &.__nopadding {
-                padding-left: 0;
-            }
-        }
-    }
-    @include sp {
-        margin-top: 22px;
-        > li {
-            span {
-                padding-left: 0.9em;
-            }
-            &::after {
-                width: 7px;
-                height: 7px;
-                top: 12px;
-            }
-        }
-    }
+.checkBox {
+    padding-bottom: 1em;
+    border-bottom: solid 1px #d3d3d3;
 }
 .contactText {
-    font-size: 16px;
+    font-size: f.myClamp(15, 16);
     font-weight: 500;
     &.__small {
         font-size: 13px;
@@ -2444,11 +2362,17 @@ html.open {
 
 .required-srt {
     color: #fff;
-    font-size: 13px;
-    padding: 0.1em 0.5em;
-    background-color: #b50d23;
-    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0.2em 0.9em 0.3em;
+    background-color: #dc0000;
+    border-radius: 4px;
     margin: auto 0.7em;
+    @include sp {
+        font-size: 13px;
+        padding: 0.1em 0.7em 0.2em;
+    }
 }
 
 .cform [type="submit"] {
@@ -2460,52 +2384,6 @@ html.open {
     color: #fff;
     border-bottom: solid 4px #b17c00;
     border-radius: 3px;
-}
-#grad_year,
-#grad_month,
-#day_year,
-#day_month {
-    width: 10% !important;
-    #grad_year {
-        margin-right: 20px !important;
-    }
-    @include sp {
-        width: 30% !important;
-    }
-}
-#birthday {
-    width: 25% !important;
-    @include sp {
-        width: 48% !important;
-    }
-}
-
-#zip {
-    width: 15% !important;
-    @include sp {
-        width: 40% !important;
-    }
-}
-#pref {
-    margin-right: 2.5%;
-    @include sp {
-        margin-right: 0;
-    }
-}
-#city {
-    margin-left: 2.5%;
-    @include sp {
-        margin-left: 0;
-    }
-}
-
-#pref,
-#city {
-    width: 98% !important;
-    @include sp {
-        width: 100% !important;
-        margin-bottom: 10px;
-    }
 }
 
 .contactAlertBox {
@@ -2520,9 +2398,17 @@ html.open {
 }
 
 .contactAlertTitle {
-    font-size: 20px;
+    font-size: f.myClamp(15, 16);
+    line-height: 1.4;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
+    @include sp {
+        text-align: left;
+        margin-bottom: 5%;
+    }
+    @include tabNote {
+        margin-bottom: 2%;
+    }
 }
 
 .wpcf7-spinner {
@@ -2553,13 +2439,6 @@ html.open {
     }
 }
 
-.contactHr {
-    margin: 7% 0;
-    @include sp {
-        margin: 12% 0;
-    }
-}
-
 .wpcf7-response-output {
     border: none !important;
     line-height: 1.6;
@@ -2570,52 +2449,8 @@ html.open {
     content: "※";
 }
 
-.openBtn {
-    cursor: pointer;
-    position: relative;
-    transition: 0.3s ease-in-out;
-    position: relative;
-    &::before {
-        opacity: 0;
-    }
-    &::after,
-    &::before {
-        position: absolute;
-        display: block;
-        font-family: "Font Awesome 6 Pro";
-        color: $mainColorSub;
-        font-weight: 900;
-        font-size: 28px;
-        line-height: 1;
-        right: 40px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    &::after {
-        content: "\f13a";
-    }
-    &::before {
-        content: "\f139";
-    }
-    &.on {
-        &::before {
-            opacity: 1;
-        }
-        &::after {
-            opacity: 0;
-        }
-    }
-    @include sp {
-        &::after,
-        &::before {
-            font-size: 22px;
-            right: -2px;
-        }
-    }
-}
 .contactTitle {
     font-size: clamp(18px, 1.6vw, 25px);
-    padding: 1.5em;
     letter-spacing: 0.05em;
     line-height: 1;
     font-weight: 600;

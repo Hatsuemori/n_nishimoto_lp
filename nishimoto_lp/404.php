@@ -1,8 +1,19 @@
 <?php get_header(''); ?>
 
 <section class="commonFvCard">
-     <div class="commonFvTextWrap text-center">
-          <h1 class="commonFvTitle">Not Found</h1>
+     <div class="relative">
+          <div class="bgImg commonFvImg"
+               style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/commonFv.jpg'">
+               <div class="commonFvWrap">
+                    <div class="cnt cntS">
+                         <div class="white" data-aos="fade-right">
+                              <h1 class="commonFvTitleJp mbS3 mbSpS2">404</h1>
+                              <p class="commonFvTitleEn">NOT PAGE</p>
+                         </div>
+                    </div>
+               </div>
+
+          </div>
      </div>
 </section>
 <div class="breadBrock">
@@ -13,22 +24,17 @@
      </div>
 </div>
 
-
-
-<section class="back_white2">
+<section class="margin">
      <div class="cnt">
           <div class="mbS">
-               <div class="text-center mb50">
-                    <h3 class="commonMidashi_4 mb30">ご指定のページが見つかりません。</h3>
-                    <p>
-                         申し訳ございません。<br>
-                         お客様がお探しのページが見つかりませんでした。<br>
-                         削除されたか、入力したURLが間違っている可能性があります。<br>
-                         お手数ですが、以下のリンクから目的のページをお探しください。
+               <div class="mb50">
+                    <p class="contactTitle __sh mbS2 text-center">お探しのページが見つかりませんでした。</p>
+                    <p class="commonText text-center">
+                         URLが正しく入力されていない可能性がありますので、再度ご確認ください。
                     </p>
                </div>
           </div>
-          <a class="commonBtn __large box-center arrow_maru" href="<?php echo home_url(); ?>">TOPへ戻る</a>
+          <a class="commonBtn" href="<?php echo home_url(); ?>">TOPへ戻る</a>
      </div>
 </section>
 

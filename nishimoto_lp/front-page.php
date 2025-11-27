@@ -16,10 +16,14 @@
      <div class="relative">
           <div class="topFvBtnWrap">
                <div class="relative">
-                    <a href="">
+                    <a href="<?php echo home_url(); ?>/#sec_form">
                          <div class="topFvBtn white"><sub>見積り依頼</sub>をする
                               <div class="topbtnImgWrap">
-                                   <img src="<?php echo get_template_directory_uri(); ?>/img/topbtnImg.png">
+                                   <picture class="picture">
+                                        <source media="(max-width: 767px)"
+                                             srcset="<?php echo get_template_directory_uri(); ?>/img/topbtnImg_sp.svg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/img/topbtnImg.svg">
+                                   </picture>
                               </div>
                          </div>
                     </a>
@@ -29,7 +33,7 @@
                <div class="topAwardBlock mbS3">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/award.png" alt="認定ビルダー/設計の専門家">
                </div>
-               <div class="topFvTitleWrap flex justCenter mbM">
+               <div class="topFvTitleWrap flex justCenter mbM mbSpM3">
                     <h1 class="topFvTitle white">建物の品質だけでは、<br>良い工場は作れない</h1>
                </div>
                <div class="toplogoBlock">
@@ -44,14 +48,14 @@
      </div>
 </section>
 <section id="sec_problem" class="topProblemCard">
-     <div class="bgImg"
+     <div class="bgImg problem_backImg"
           style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/problem_back.jpg');">
           <div class="cnt cntS">
                <div class="topProblemInnerBlock">
-                    <div class="text-center white mbS">
-                         <h2 class="commonTitleJp mbS3">
+                    <div class="text-center white mbS mbSpM2">
+                         <h2 class="commonTitleJp mbS3 mbSpM3">
                               その打ち合わせ、<br>
-                              <sub class="yellow">「担当者の持ち帰り」</sub>ばかりで進んでいますか？
+                              <sub class="yellow">「担当者の持ち帰り」</sub>ばかりで<br class="sp">進んでいますか？
                          </h2>
                          <p class="commonSubText">打ち合わせのたびに、こんなフラストレーションを感じている担当者様が急増しています。</p>
                     </div>
@@ -71,8 +75,8 @@
                                         <figcaption class="visually-hidden">話が通じない、伝わらない</figcaption>
                                    </figure>
                                    <div class="problemTextBox">
-                                        <div class="text-center mbS2">
-                                             <h3 class="problemTitle mainColor">話が通じない、伝わらない</h3>
+                                        <div class="text-center mbS2 mbSpS">
+                                             <h3 class="problemTitle mainColor">話が通じない、<br class="pc3">伝わらない</h3>
                                         </div>
                                         <p class="commonText">生産ラインの話をしているのに、建築担当者は建物の話ばかり。こちらの意図を理解してもらうだけで一苦労だ…。</p>
                                    </div>
@@ -93,8 +97,8 @@
                                         <figcaption class="visually-hidden">「専門部署に確認します」で毎回中断</figcaption>
                                    </figure>
                                    <div class="problemTextBox">
-                                        <div class="text-center mbS2">
-                                             <h3 class="problemTitle mainColor">「専門部署に確認します」で毎回中断</h3>
+                                        <div class="text-center mbS2 mbSpS">
+                                             <h3 class="problemTitle mainColor">「専門部署に確認<br class="pc3">します」で毎回中断</h3>
                                         </div>
                                         <p class="commonText">設備の仕様について質問しても、担当者はその場で答えられない。「持ち帰って検討します」で、話が少しも前に進まない…。
                                         </p>
@@ -116,8 +120,8 @@
                                         <figcaption class="visually-hidden">結局、責任の所在が曖昧に</figcaption>
                                    </figure>
                                    <div class="problemTextBox">
-                                        <div class="text-center mbS2">
-                                             <h3 class="problemTitle mainColor">結局、責任の所在が曖昧に</h3>
+                                        <div class="text-center mbS2 mbSpS">
+                                             <h3 class="problemTitle mainColor">結局、責任の所在が<br class="pc3">曖昧に</h3>
                                         </div>
                                         <p class="commonText">建築と設備の担当者が別だと、連携が取れずトラブルの元に。結局、施主であるこちらが調整する羽目になる…。
                                         </p>
@@ -129,8 +133,8 @@
                          <img src="<?php echo get_template_directory_uri(); ?>/img/yajirushi.svg">
                     </div>
                     <div class="solutionBox text-center">
-                         <h2 class="commonTitleJp yellow mbS3">そのストレス、すべてなくせます。</h2>
-                         <p class="solutionText white">西本システムなら、窓口一つで建築と設備の話がワンストップで完結。<br>
+                         <h2 class="commonTitleJp __sp yellow mbS3 mbSpS">そのストレス、<br class="sp">すべてなくせます。</h2>
+                         <p class="solutionText white text-left-sp">西本システムなら、窓口一つで建築と設備の話がワンストップで完結。<br>
                               私たちが、お客様の事業を深く理解する「通訳」であり「実行者」です。</p>
                     </div>
                </div>
@@ -140,18 +144,22 @@
 
 <section id="sec_merit" class="topMeritCard margin">
      <div class="cnt cntM">
-          <div class="commonTitleBlock text-center relative mbS">
+          <div class="commonTitleBlock text-center relative mbS mbSpM2">
                <p class="commonTitleEn">Merit</p>
                <div class="commonTitleWrap">
-                    <h2 class="commonTitleJp">
-                         私たちの<sub class="mainColor">価値</sub>は、2つの<sub class="mainColor">プロの視点</sub>を<sub
+                    <h2 class="commonTitleJp __xsp">
+                         私たちの<sub class="mainColor">価値</sub>は、<br class="sp">2つの<sub class="mainColor">プロの視点</sub>を<sub
                               class="mainColor">融合</sub>させること。
                     </h2>
                </div>
           </div>
           <ul class="meritList flex flexWrap relative">
                <div class="meritImgWrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/kakeru.svg">
+                    <picture class="picture">
+                         <source media="(max-width: 767px)"
+                              srcset="<?php echo get_template_directory_uri(); ?>/img/kakeru_sp.svg">
+                         <img src="<?php echo get_template_directory_uri(); ?>/img/kakeru.svg">
+                    </picture>
                </div>
                <li>
                     <div class="relative mbM3">
@@ -160,7 +168,7 @@
                                    alt="株式会社横河システム建築ロゴ">
                          </div>
                     </div>
-                    <div class="text-center mbS3">
+                    <div class="meritBoxWrap text-center mbS3 mbSpM3">
                          <div class="meritBox"><span>建築数10,000件以上</span></div>
                     </div>
                     <h3 class="meritTitle text-center mainColor mbS">信頼の建築システム<br>
@@ -168,7 +176,7 @@
                     </h3>
                     <ul class="systemlist flex flexWrap">
                          <li>
-                              <div class="flex">
+                              <div class="flex flexPc flexTabNote">
                                    <div class="systemImgBlock">
                                         <figure class="bgImg meritImg"
                                              style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/merit01.jpg');">
@@ -176,14 +184,14 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS">無柱大空間</h4>
+                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">無柱大空間</h4>
                                         <p class="commonText">最大60mの無柱空間が、生産ラインの自由なレイアウトと将来の変更に柔軟に対応します。
                                         </p>
                                    </div>
                               </div>
                          </li>
                          <li>
-                              <div class="flex">
+                              <div class="flex flexPc flexTabNote">
                                    <div class="systemImgBlock">
                                         <figure class="bgImg meritImg"
                                              style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/merit02.jpg');">
@@ -191,14 +199,14 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS">高品質・高耐久</h4>
+                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">高品質・高耐久</h4>
                                         <p class="commonText">コンピュータ制御による一貫生産と緻密な構造計算が、安定した品質と高い耐震性を約束します。
                                         </p>
                                    </div>
                               </div>
                          </li>
                          <li>
-                              <div class="flex">
+                              <div class="flex flexPc flexTabNote">
                                    <div class="systemImgBlock">
                                         <figure class="bgImg meritImg"
                                              style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/merit03.jpg');">
@@ -206,7 +214,7 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS">短工期・低コスト</h4>
+                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">短工期・低コスト</h4>
                                         <p class="commonText">徹底的に合理化された工法が、従来比で最大20%の工期短縮とコスト削減を実現します。
                                         </p>
                                    </div>
@@ -221,14 +229,14 @@
                                    alt="西本システムロゴ">
                          </div>
                     </div>
-                    <div class="text-center mbS3">
+                    <div class="meritBoxWrap text-center mbS3 mbSpM3">
                          <div class="meritBox"><span>創業28年　公共工事22年Aランク維持</span></div>
                     </div>
                     <h3 class="meritTitle text-center mainColor mbS">事業を動かす知見<br>生産設備への深い理解と設計力
                     </h3>
                     <ul class="systemlist flex flexWrap">
                          <li>
-                              <div class="flex">
+                              <div class="flex flexPc flexTabNote">
                                    <div class="systemImgBlock">
                                         <figure class="bgImg meritImg"
                                              style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/merit04.jpg');">
@@ -236,14 +244,14 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS">生産プロセス設計</h4>
+                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">生産プロセス設計</h4>
                                         <p class="commonText">お客様の製造工程を深く理解し、原材料の搬入から出荷まで、最も効率的な動線を設計します。
                                         </p>
                                    </div>
                               </div>
                          </li>
                          <li>
-                              <div class="flex">
+                              <div class="flex flexPc flexTabNote">
                                    <div class="systemImgBlock">
                                         <figure class="bgImg meritImg"
                                              style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/merit05.jpg');">
@@ -251,14 +259,14 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS">設備・ユーティリティ設計</h4>
+                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">設備・ユーティリティ設計</h4>
                                         <p class="commonText">機械の性能を100%引き出すための基礎、電源、配管計画を、建物の設計と同時に最適化します。
                                         </p>
                                    </div>
                               </div>
                          </li>
                          <li>
-                              <div class="flex">
+                              <div class="flex flexPc flexTabNote">
                                    <div class="systemImgBlock">
                                         <figure class="bgImg meritImg"
                                              style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/merit06.jpg');">
@@ -266,7 +274,7 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS">法規制への知見</h4>
+                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">法規制への知見</h4>
                                         <p class="commonText">消防法やHACCP等、業種特有の法規制をクリアしたプランで、手戻りのない許認可取得を支援します。
                                         </p>
                                    </div>
@@ -285,14 +293,14 @@
           <div class="commonTitleBlock text-center relative">
                <p class="commonTitleEn">Solution</p>
                <div class="commonTitleWrap">
-                    <h2 class="commonTitleJp">
-                         <sub class="mainColor">お客様の事業</sub>と<sub class="mainColor">伴走</sub>する、私たちの<sub
+                    <h2 class="commonTitleJp __xsp">
+                         <sub class="mainColor">お客様の事業</sub>と<sub class="mainColor">伴走</sub>する、<br class="sp">私たちの<sub
                               class="mainColor">ソリューション</sub>
                     </h2>
                </div>
           </div>
           <div class="commonSubTextWrap mbS">
-               <p class="commonSubText text-center">ただ建てるだけではない。私たちの仕事は、お客様の課題解決です。</p>
+               <p class="commonSubText text-center">ただ建てるだけではない。<br class="sp">私たちの仕事は、お客様の課題解決です。</p>
           </div>
           <ul class="solutionList flex flexWrap">
                <li>
@@ -303,7 +311,7 @@
                               allowfullscreen>
                          </iframe>
                     </div>
-                    <h3 class="solutionTitle text-center mbS2">ハマコー機械株式会社 新工場</h3>
+                    <h3 class="solutionTitle text-center text-left-sp mbS2">ハマコー機械株式会社 新工場</h3>
                     <ul class="solutionTableList flex flexWrap">
                          <li>
                               <table class="solutionTable">
@@ -317,7 +325,7 @@
                                    </tr>
                               </table>
                          </li>
-                         <li>
+                         <li class="__second">
                               <table class="solutionTable">
                                    <tr>
                                         <th>面積</th>
@@ -330,7 +338,7 @@
                               </table>
                          </li>
                     </ul>
-                    <ul class="subjectList flex flexWrap relative mbS">
+                    <ul class="subjectList flex flexWrap relative mbS matchHeight">
                          <li>
                               <h4 class="subjectTitle mbS">お客様の課題</h4>
                               <ul class="commonList flex flexWrap">
@@ -346,14 +354,18 @@
                               </ul>
                          </li>
                          <div class="subjectListImgWrap">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/yajirushi_b.svg">
+                              <picture class="picture">
+                                   <source media="(max-width: 959px)"
+                                        srcset="<?php echo get_template_directory_uri(); ?>/img/yajirushi_b_sp.svg">
+                                   <img src="<?php echo get_template_directory_uri(); ?>/img/yajirushi_b.svg">
+                              </picture>
+
                          </div>
                     </ul>
                     <div class="subjectBox">
                          <h4 class="subjectTitle mbS3">導入後の成果</h4>
                          <p class="commonText">機械の性能を100%引き出す、高精度な生産環境が完成。作業効率も向上し、技術力をアピールできる「見せる工場」として事業価値の向上に貢献しました。
                          </p>
-
                     </div>
                </li>
                <li>
@@ -364,7 +376,7 @@
                               allowfullscreen>
                          </iframe>
                     </div>
-                    <h3 class="solutionTitle text-center mbS2">ハバジット日本 株式会社　和歌山第3工場</h3>
+                    <h3 class="solutionTitle text-center text-left-sp mbS2">ハバジット日本 株式会社　和歌山第3工場</h3>
                     <ul class="solutionTableList flex flexWrap">
                          <li>
                               <table class="solutionTable">
@@ -378,7 +390,7 @@
                                    </tr>
                               </table>
                          </li>
-                         <li>
+                         <li class="__second">
                               <table class="solutionTable">
                                    <tr>
                                         <th>面積</th>
@@ -391,12 +403,12 @@
                               </table>
                          </li>
                     </ul>
-                    <ul class="subjectList flex flexWrap relative mbS">
+                    <ul class="subjectList flex flexWrap relative mbS matchHeight">
                          <li>
                               <h4 class="subjectTitle mbS">お客様の課題</h4>
                               <ul class="commonList flex flexWrap">
                                    <li><span>3,917㎡という大規模建築における、コストと工期への懸念。</span></li>
-                                   <li><span>旧工場のレイアウトが原因で発生していた、非効率な作業動線。広大な空間での、生産フローの最適化という難題。
+                                   <li><span>旧工場のレイアウトが原因で発生していた、非効率な作業動線。広大な空間での、生産フローの最適化という難題。</span></li>
                               </ul>
                          </li>
                          <li>
@@ -407,7 +419,11 @@
                               </ul>
                          </li>
                          <div class="subjectListImgWrap">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/yajirushi_b.svg">
+                              <picture class="picture">
+                                   <source media="(max-width: 959px)"
+                                        srcset="<?php echo get_template_directory_uri(); ?>/img/yajirushi_b_sp.svg">
+                                   <img src="<?php echo get_template_directory_uri(); ?>/img/yajirushi_b.svg">
+                              </picture>
                          </div>
                     </ul>
                     <div class="subjectBox">
@@ -422,22 +438,24 @@
 </section>
 <section id="sec_philo" class="topPhiloCard">
      <div class="cntWide">
-          <div class="flex">
+          <div class="flex flexPc">
                <div class="philoInfoBlock">
                     <div class="philoInfoBox">
-                         <div class="commonTitleBlock relative mbM2">
+                         <div class="commonTitleBlock relative mbM2 mbSpL5">
                               <p class="commonTitleEn">Philosophy</p>
                               <div class="commonTitleWrap">
-                                   <h2 class="commonTitleJp">私が<sub class="mainColor">「ただの箱は作らない」</sub><br>と決めている理由</h2>
+                                   <h2 class="commonTitleJp __msp">私が<sub
+                                             class="mainColor">「ただの箱は作らない」</sub><br>と決めている理由</h2>
                               </div>
                          </div>
-                         <p class="commonText __lh mbM3">
-                              長年、様々な工場の設備に携わる中で、数多くの「もったいない現場」を見てきました。<br>立派な建物なのに、動線が悪く生産性が低い。最新の機械なのに、性能を活かしきれていない。その原因は、いつも建築と設備の分断にありました。
-                         </p>
-                         <p class="commonText __lh">
-                              だからこそ私たちは、お客様の事業そのものを深く理解することから始めます。どんな製品を作り、どんな機械を使い、従業員がどう動くのか。その全てを設計図に落とし込み、信頼できる器「YESS建築」で形にする。<br>建物と設備、両方に責任を持つ。それが、お客様の未来に貢献する唯一の方法だと信じています。
-                         </p>
-
+                         <div class="philoInfoTextBox">
+                              <p class="commonText __lh mbM3">
+                                   長年、様々な工場の設備に携わる中で、数多くの「もったいない現場」を見てきました。<br>立派な建物なのに、動線が悪く生産性が低い。最新の機械なのに、性能を活かしきれていない。その原因は、いつも建築と設備の分断にありました。
+                              </p>
+                              <p class="commonText __lh">
+                                   だからこそ私たちは、お客様の事業そのものを深く理解することから始めます。どんな製品を作り、どんな機械を使い、従業員がどう動くのか。その全てを設計図に落とし込み、信頼できる器「YESS建築」で形にする。<br>建物と設備、両方に責任を持つ。それが、お客様の未来に貢献する唯一の方法だと信じています。
+                              </p>
+                         </div>
                     </div>
                </div>
                <figure class="bgImg philoImg"
@@ -454,7 +472,7 @@
           <div class="commonTitleBlock text-center relative mbS">
                <p class="commonTitleEn">Flow</p>
                <div class="commonTitleWrap">
-                    <h2 class="commonTitleJp">
+                    <h2 class="commonTitleJp __xsp">
                          <sub class="mainColor">お問い合わせ</sub>から<sub class="mainColor">完成</sub>までの流れ
                     </h2>
                </div>
@@ -466,8 +484,8 @@
                          </div>
                     </div>
                     <div class="flowInnerBox">
-                         <div class="text-center">
-                              <h3 class="flowTitle mainColor mbS3">お問い合わせ・ご相談</h3>
+                         <div class="text-center text-left-sp">
+                              <h3 class="flowTitle mainColor mbS3 mbSpS1">お問い合わせ・ご相談</h3>
                               <p class="commonText">まずはお電話かフォームで、お客様の事業の夢や課題をお聞かせください。</p>
                          </div>
                     </div>
@@ -478,8 +496,8 @@
                          </div>
                     </div>
                     <div class="flowInnerBox">
-                         <div class="text-center">
-                              <h3 class="flowTitle mainColorSub mbS3">ヒアリング・現地調査</h3>
+                         <div class="text-center text-left-sp">
+                              <h3 class="flowTitle mainColorSub mbS3 mbSpS1">ヒアリング・現地調査</h3>
                               <p class="commonText">建築と設備のプロが伺い、事業内容や敷地状況を詳しく確認させていただきます。</p>
                          </div>
                     </div>
@@ -490,8 +508,8 @@
                          </div>
                     </div>
                     <div class="flowInnerBox">
-                         <div class="text-center">
-                              <h3 class="flowTitle mainColor mbS3">プランニング・お見積もり（無料）</h3>
+                         <div class="text-center text-left-sp">
+                              <h3 class="flowTitle mainColor mbS3 mbSpS1">プランニング・お見積もり（無料）</h3>
                               <p class="commonText">お客様の事業に最適なプランと、詳細なお見積もりを分かりやすくご提示します。</p>
                          </div>
                     </div>
@@ -502,8 +520,8 @@
                          </div>
                     </div>
                     <div class="flowInnerBox">
-                         <div class="text-center">
-                              <h3 class="flowTitle mainColorSub mbS3">ご契約・設計</h3>
+                         <div class="text-center text-left-sp">
+                              <h3 class="flowTitle mainColorSub mbS3 mbSpS1">ご契約・設計</h3>
                               <p class="commonText">ご提案内容にご納得いただけましたらご契約。稼働後の利益を生む実施設計を進めます。</p>
                          </div>
                     </div>
@@ -514,8 +532,8 @@
                          </div>
                     </div>
                     <div class="flowInnerBox">
-                         <div class="text-center">
-                              <h3 class="flowTitle mainColor mbS3">施工</h3>
+                         <div class="text-center text-left-sp">
+                              <h3 class="flowTitle mainColor mbS3 mbSpS1">施工</h3>
                               <p class="commonText">安全管理を徹底し、YESS建築の高品質な施工システムで迅速に建設を進めます。</p>
                          </div>
                     </div>
@@ -526,8 +544,8 @@
                          </div>
                     </div>
                     <div class="flowInnerBox">
-                         <div class="text-center">
-                              <h3 class="flowTitle mainColorSub mbS3">お引き渡し・アフターフォロー</h3>
+                         <div class="text-center text-left-sp">
+                              <h3 class="flowTitle mainColorSub mbS3 mbSpS1">お引き渡し・アフターフォロー</h3>
                               <p class="commonText"> 完成後も、お客様の事業のパートナーとして末永くサポートさせていただきます。</p>
                          </div>
                     </div>
@@ -583,14 +601,16 @@
           <div class="commonTitleBlock text-center relative">
                <p class="commonTitleEn">Contact</p>
                <div class="commonTitleWrap">
-                    <h2 class="commonTitleJp white">
+                    <h2 class="commonTitleJp __xsp white">
                          貴社の事業に、最適な「器」と「魂」を。
                     </h2>
                </div>
           </div>
-          <div class="commonSubTextWrap mbS">
-               <p class="commonSubText __small text-center white">工場建築は、事業の未来を決める重要な投資です。
-                    建築の品質、設備の性能、そして事業の成長性。<br>そのどれも妥協せず、最高の答えを私たちと一緒に見つけませんか。まずはお客様の事業への想いと、工場の理想をお聞かせください。</p>
+          <div class="commonSubTextWrap mbS mbSpM2">
+               <p class="commonSubText __small text-center text-left-sp white">工場建築は、事業の未来を決める重要な投資です。
+                    建築の品質、設備の性能、そして事業の成長性。<br class="pc">そのどれも妥協せず、最高の答えを私たちと一緒に見つけませんか。<br
+                         class="pc3">まずはお客様の事業への想いと、工場の理想をお聞かせください。
+               </p>
           </div>
 
           <div class="contactForm" data-aos="fade-up">
