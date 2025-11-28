@@ -8,7 +8,7 @@
                     <div class="cnt cntS">
                          <div class="white" data-aos="fade-right">
                               <h1 class="commonFvTitleJp mbS3 mbSpS2">お問い合わせ</h1>
-                              <p class="commonFvTitleEn">CONTACT</p>
+                              <p class="commonFvTitleEn">CONFIRM</p>
                          </div>
                     </div>
                </div>
@@ -23,13 +23,17 @@
           </div>
      </div>
 </div>
-
 <section class="margin">
      <div class="cnt cntXS">
-          <div class="mb50 text-center">
-               <p class="contactTitle mbS">こちらの内容でお間違いないでしょうか？</p>
+          <div class="text-center">
+               <p class="contactTitle mbS3">こちらの内容でお間違いないでしょうか？</p>
                <p class="contactText">問題なければ下記の送信ボタンを押して下さい。</p>
           </div>
+     </div>
+</section>
+
+<section class="confirmCard margin">
+     <div class="cnt cntXS">
           <div class="contactForm">
                <?php the_content(); ?>
           </div>

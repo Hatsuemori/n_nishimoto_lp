@@ -14,9 +14,10 @@
                          <dt>専門家による</dt>
                          <dd>無料相談・無料見積</dd>
                     </h2>
-                    <p class="commonSubText white mbS2 mbSpM2">建築と設備、両方の視点から貴社の課題を整理し、<br class="pc3">最適なプランの方向性をご提案します。
+                    <p class="commonSubText white mbS2 mbSpM2">建築と設備、両方の視点から貴社の課題を<br class="sp">整理し、<br
+                              class="pc3">最適なプランの方向性をご提案します。
                     </p>
-                    <div class="conSubBox white mbS mbSpM2">
+                    <div class="conSubBox white mbS25 mbSpM2">
                          <p class="conSubText">まずは<sub class="yellow">お問い合わせ</sub>ください</p>
                     </div>
                     <a href="<?php echo home_url(); ?>/#sec_form" class="conBtn">無料見積もり</a>

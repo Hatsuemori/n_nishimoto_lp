@@ -1,16 +1,16 @@
 <?php get_header(''); ?>
-<!-- <div class="loading">
+<div class="loading">
      <div class="loading-animation">
           <div class="loadingInner">
-               <div class="mbS2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" alt="ロゴ">
+               <div class="logoBox mbS">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="ロゴ">
                </div>
                <p class="loadTitle text-center">
-                    不動産に、安心という選択肢を。
+                    建物の品質だけでは、良い工場は作れない
                </p>
           </div>
      </div>
-</div> -->
+</div>
 
 <section class="topFvImgCard">
      <div class="relative">
@@ -30,7 +30,7 @@
                </div>
           </div>
           <div class="topFvWrap">
-               <div class="topAwardBlock mbS3">
+               <div class="topAwardBlock mbS2">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/award.png" alt="認定ビルダー/設計の専門家">
                </div>
                <div class="topFvTitleWrap flex justCenter mbM mbSpM3">
@@ -149,17 +149,13 @@
                <div class="commonTitleWrap">
                     <h2 class="commonTitleJp __xsp">
                          私たちの<sub class="mainColor">価値</sub>は、<br class="sp">2つの<sub class="mainColor">プロの視点</sub>を<sub
-                              class="mainColor">融合</sub>させること。
+                              class="mainColor">融合させる</sub>こと。
                     </h2>
                </div>
           </div>
           <ul class="meritList flex flexWrap relative">
-               <div class="meritImgWrap">
-                    <picture class="picture">
-                         <source media="(max-width: 767px)"
-                              srcset="<?php echo get_template_directory_uri(); ?>/img/kakeru_sp.svg">
-                         <img src="<?php echo get_template_directory_uri(); ?>/img/kakeru.svg">
-                    </picture>
+               <div class="meritImgWrap pc">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/kakeru.svg">
                </div>
                <li>
                     <div class="relative mbM3">
@@ -168,10 +164,10 @@
                                    alt="株式会社横河システム建築ロゴ">
                          </div>
                     </div>
-                    <div class="meritBoxWrap text-center mbS3 mbSpM3">
+                    <div class="meritBoxWrap text-center mbS2 mbSpM3">
                          <div class="meritBox"><span>建築数10,000件以上</span></div>
                     </div>
-                    <h3 class="meritTitle text-center mainColor mbS">信頼の建築システム<br>
+                    <h3 class="meritTitle text-center mainColor mbM3">信頼の建築システム<br>
                          横河システム建築「YESS建築」
                     </h3>
                     <ul class="systemlist flex flexWrap">
@@ -184,7 +180,7 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">無柱大空間</h4>
+                                        <h4 class="meritSubTitle mainColor mbS2 mbSpS3">無柱大空間</h4>
                                         <p class="commonText">最大60mの無柱空間が、生産ラインの自由なレイアウトと将来の変更に柔軟に対応します。
                                         </p>
                                    </div>
@@ -199,7 +195,7 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">高品質・高耐久</h4>
+                                        <h4 class="meritSubTitle mainColor mbS2 mbSpS3">高品質・高耐久</h4>
                                         <p class="commonText">コンピュータ制御による一貫生産と緻密な構造計算が、安定した品質と高い耐震性を約束します。
                                         </p>
                                    </div>
@@ -214,7 +210,7 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">短工期・低コスト</h4>
+                                        <h4 class="meritSubTitle mainColor mbS2 mbSpS3">短工期・低コスト</h4>
                                         <p class="commonText">徹底的に合理化された工法が、従来比で最大20%の工期短縮とコスト削減を実現します。
                                         </p>
                                    </div>
@@ -229,10 +225,10 @@
                                    alt="西本システムロゴ">
                          </div>
                     </div>
-                    <div class="meritBoxWrap text-center mbS3 mbSpM3">
+                    <div class="meritBoxWrap text-center mbS2 mbSpM3">
                          <div class="meritBox"><span>創業28年　公共工事22年Aランク維持</span></div>
                     </div>
-                    <h3 class="meritTitle text-center mainColor mbS">事業を動かす知見<br>生産設備への深い理解と設計力
+                    <h3 class="meritTitle text-center mainColor mbM3">事業を動かす知見<br>生産設備への深い理解と設計力
                     </h3>
                     <ul class="systemlist flex flexWrap">
                          <li>
@@ -244,7 +240,7 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">生産プロセス設計</h4>
+                                        <h4 class="meritSubTitle mainColor mbS2 mbSpS3">生産プロセス設計</h4>
                                         <p class="commonText">お客様の製造工程を深く理解し、原材料の搬入から出荷まで、最も効率的な動線を設計します。
                                         </p>
                                    </div>
@@ -259,7 +255,7 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">設備・ユーティリティ設計</h4>
+                                        <h4 class="meritSubTitle mainColor mbS2 mbSpS3">設備・ユーティリティ設計</h4>
                                         <p class="commonText">機械の性能を100%引き出すための基礎、電源、配管計画を、建物の設計と同時に最適化します。
                                         </p>
                                    </div>
@@ -274,7 +270,7 @@
                                         </figure>
                                    </div>
                                    <div class="systemInfoBlock">
-                                        <h4 class="meritSubTitle mainColor mbS mbSpS3">法規制への知見</h4>
+                                        <h4 class="meritSubTitle mainColor mbS2 mbSpS3">法規制への知見</h4>
                                         <p class="commonText">消防法やHACCP等、業種特有の法規制をクリアしたプランで、手戻りのない許認可取得を支援します。
                                         </p>
                                    </div>
@@ -408,7 +404,7 @@
                               <h4 class="subjectTitle mbS">お客様の課題</h4>
                               <ul class="commonList flex flexWrap">
                                    <li><span>3,917㎡という大規模建築における、コストと工期への懸念。</span></li>
-                                   <li><span>旧工場のレイアウトが原因で発生していた、非効率な作業動線。広大な空間での、生産フローの最適化という難題。</span></li>
+                                   <li><span>広大な空間での、生産フローの最適化という難題。</span></li>
                               </ul>
                          </li>
                          <li>
@@ -469,7 +465,7 @@
 
 <section id="sec_flow" class="topFlowCard margin">
      <div class="cnt cntS">
-          <div class="commonTitleBlock text-center relative mbS">
+          <div class="commonTitleBlock text-center relative mbS3">
                <p class="commonTitleEn">Flow</p>
                <div class="commonTitleWrap">
                     <h2 class="commonTitleJp __xsp">
@@ -556,7 +552,7 @@
 </section>
 <section id="sec_faq" class="topFaqCard">
      <div class="cnt cntS">
-          <div class="commonTitleBlock text-center relative mbS">
+          <div class="commonTitleBlock text-center relative mbS3">
                <p class="commonTitleEn">FAQ</p>
                <div class="commonTitleWrap">
                     <h2 class="commonTitleJp">
@@ -606,7 +602,7 @@
                     </h2>
                </div>
           </div>
-          <div class="commonSubTextWrap mbS mbSpM2">
+          <div class="commonSubTextWrap mbS2 mbSpM2">
                <p class="commonSubText __small text-center text-left-sp white">工場建築は、事業の未来を決める重要な投資です。
                     建築の品質、設備の性能、そして事業の成長性。<br class="pc">そのどれも妥協せず、最高の答えを私たちと一緒に見つけませんか。<br
                          class="pc3">まずはお客様の事業への想いと、工場の理想をお聞かせください。

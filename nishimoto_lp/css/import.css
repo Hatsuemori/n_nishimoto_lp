@@ -1434,6 +1434,10 @@ p {
   margin-bottom: 3.5%;
 }
 
+.mbS25 {
+  margin-bottom: 2.5%;
+}
+
 .mbS2 {
   margin-bottom: 2%;
 }
@@ -3876,12 +3880,16 @@ a.page-numbers {
   visibility: hidden;
 }
 
-.loadingInner img {
-  width: 130px;
+.logoBox {
+  width: 300px;
+  margin-inline: auto;
+  padding: 0.5em;
+  border-radius: 5px;
+  background-color: #fff;
 }
 @media only screen and (max-width: 767px) {
-  .loadingInner img {
-    width: 100px;
+  .logoBox {
+    width: 250px;
   }
 }
 
@@ -3889,7 +3897,7 @@ a.page-numbers {
   width: 100vw;
   height: 100vh;
   transition: all 1s;
-  background: linear-gradient(to bottom, #167bf7, #fff);
+  background: #003277;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -3903,7 +3911,7 @@ a.page-numbers {
 }
 
 .loadTitle {
-  font-size: clamp(2rem, 1.5145631068rem + 1.2944983819vw, 4rem);
+  font-size: clamp(1.7rem, 1.2631067961rem + 1.1650485437vw, 3.5rem);
   letter-spacing: 0.1em;
   font-weight: 500;
   line-height: 1.4;
@@ -4072,6 +4080,9 @@ main {
   font-weight: bold;
 }
 @media only screen and (max-width: 767px) {
+  .commonTitleJp {
+    letter-spacing: 0.04em;
+  }
   .commonTitleJp.__sp {
     font-size: 30px;
     line-height: 1.2;
@@ -4750,7 +4761,7 @@ a:hover .ahover {
   max-width: 886px;
   padding: 0 97px;
   position: absolute;
-  top: 50%;
+  top: 51%;
   left: 0;
   transform: translateY(-50%);
 }
@@ -4793,7 +4804,7 @@ a:hover .ahover {
 }
 
 .topAwardBlock {
-  width: 57%;
+  width: 65%;
   margin-inline: auto;
 }
 @media only screen and (max-width: 767px) {
@@ -4814,14 +4825,14 @@ a:hover .ahover {
 
 .topFvTitle {
   font-size: clamp(2.8rem, 2.0961165049rem + 1.8770226537vw, 5.7rem);
-  line-height: 1.3;
+  line-height: 1.4;
   font-weight: 600;
 }
 
 .toplogoBlock {
-  width: 646px;
+  width: 686px;
   background-color: #fff;
-  padding: 1em 1em;
+  padding: 1.3em;
   border-radius: 5px;
 }
 @media only screen and (max-width: 767px) {
@@ -4847,7 +4858,7 @@ a:hover .ahover {
   position: absolute;
   padding: 0 87px;
   right: 0;
-  bottom: 15%;
+  bottom: 11%;
 }
 @media only screen and (max-width: 1480px) {
   .topFvBtnWrap {
@@ -4909,7 +4920,7 @@ a:hover .ahover {
 }
 @media only screen and (max-width: 767px) {
   .topFvBtn {
-    padding: 0.5em 3em 0.7em 1em;
+    padding: 0.5em 1em 0.7em 1em;
   }
 }
 
@@ -4923,8 +4934,9 @@ a:hover .ahover {
 @media only screen and (max-width: 767px) {
   .topbtnImgWrap {
     width: 79%;
-    top: -75px;
+    top: unset;
     right: -13px;
+    bottom: 0;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 959px) {
@@ -5016,8 +5028,8 @@ footer {
   .footerMenueBlock {
     width: 100%;
     justify-content: flex-start;
-    -moz-column-gap: 65px;
-         column-gap: 65px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
   }
 }
 
@@ -5223,6 +5235,11 @@ footer {
   font-weight: bold;
   line-height: 1.2;
 }
+@media only screen and (max-width: 767px) {
+  .problemTitle {
+    letter-spacing: 0.07em;
+  }
+}
 
 .problemNbBlock {
   position: absolute;
@@ -5337,7 +5354,7 @@ footer {
 }
 .meritList > li {
   width: calc((100% - 42px) / 2);
-  padding: 0 3em 3em;
+  padding: 0.5em 3em 2.5em;
   border: solid 1px #003277;
 }
 @media only screen and (max-width: 1500px) {
@@ -5351,7 +5368,23 @@ footer {
   }
   .meritList > li {
     width: 100%;
-    padding: 1em 1.3em 3em;
+    padding: 1em 1.3em 1em;
+  }
+  .meritList > li:not(:last-child) {
+    position: relative;
+  }
+  .meritList > li:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -36px;
+    left: 50%;
+    width: 23px;
+    height: 23px;
+    transform: translateX(-50%);
+    background-image: url(.././img/kakeru_sp.svg);
+    background-repeat: no-repeat;
+    background-size: 23px;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 1279px) {
@@ -5367,7 +5400,7 @@ footer {
 
 .meritLogoWrap {
   position: absolute;
-  top: -28px;
+  top: -37px;
   left: 50%;
   transform: translate(-50%);
 }
@@ -5398,7 +5431,7 @@ footer {
   margin-inline: auto;
 }
 .meritBox span {
-  font-size: clamp(1.6rem, 1.5029126214rem + 0.2588996764vw, 2rem);
+  font-size: clamp(1.5rem, 1.3786407767rem + 0.3236245955vw, 2rem);
   font-weight: 600;
   line-height: 1;
   color: #ffe600;
@@ -5407,6 +5440,9 @@ footer {
   .meritBox {
     width: 100%;
     padding: 0.4em 0.5em 0.3em;
+  }
+  .meritBox span {
+    letter-spacing: 0.06em;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 1279px) {
@@ -5471,7 +5507,7 @@ footer {
  * contact
  *================================================*/
 .conCard {
-  padding: 2.5em 0;
+  padding: 2.5em 0 0;
   position: relative;
 }
 .conCard::after {
@@ -5481,7 +5517,7 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  height: 88%;
+  height: 100%;
   background-image: url(.././img/contact_back.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -5498,6 +5534,7 @@ footer {
 }
 
 .contactInner {
+  max-width: 1300px;
   margin-inline: auto;
 }
 
@@ -5524,7 +5561,7 @@ footer {
   content: "";
   display: block;
   position: absolute;
-  top: 62%;
+  top: 71%;
   width: 14.5px;
   height: 26.5px;
   transform: translateY(-50%);
@@ -5596,36 +5633,26 @@ footer {
 
 .conImgWrap {
   position: absolute;
-  width: 20%;
-  right: -8px;
-  top: 22px;
+  width: clamp(200px, 14vw, 268px);
+  right: 0;
+  bottom: 0;
   z-index: 1;
 }
 @media only screen and (max-width: 767px) {
   .conImgWrap {
     width: 40%;
     right: -4px;
-    top: unset;
-    bottom: -54px;
+    bottom: -23.5%;
   }
 }
-@media only screen and (min-width: 767px) and (max-width: 959px) {
+@media only screen and (min-width: 767px) and (max-width: 1279px) {
   .conImgWrap {
     width: 22%;
-    right: 11px;
-    top: 66px;
-  }
-}
-@media only screen and (min-width: 960px) and (max-width: 1279px) {
-  .conImgWrap {
-    width: 22%;
-    right: 11px;
-    top: 61px;
   }
 }
 
 .commonSubTextWrap {
-  margin-top: -37px;
+  margin-top: -26px;
   position: relative;
   z-index: 2;
 }
@@ -5725,7 +5752,7 @@ footer {
   width: 73%;
   font-weight: 500;
 }
-@media only screen and (min-width: 1280px) and (max-width: 1430px) {
+@media only screen and (min-width: 1280px) and (max-width: 1600px) {
   .solutionTable th {
     width: 35%;
   }
@@ -6092,16 +6119,16 @@ footer {
   background-size: 48px;
 }
 .openBtn.__first::after {
-  background-image: url(.././img/open.svg);
+  background-image: url(.././img/close.svg);
 }
 .openBtn.__first::before {
-  background-image: url(.././img/close.svg);
+  background-image: url(.././img/open.svg);
 }
 .openBtn::after {
-  background-image: url(.././img/close.svg);
+  background-image: url(.././img/open.svg);
 }
 .openBtn::before {
-  background-image: url(.././img/open.svg);
+  background-image: url(.././img/close.svg);
 }
 .openBtn.on::before {
   opacity: 1;
@@ -6197,4 +6224,9 @@ footer {
     border-radius: 5px;
     padding: 1.3em 1em 1.7em;
   }
+}
+
+.confirmCard {
+  padding: 2em 0;
+  background-color: #003277;
 }/*# sourceMappingURL=import.css.map */
